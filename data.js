@@ -1,14 +1,11 @@
-// This file holds all your portfolio data. 
-// Just update the text inside the quotes to update your website!
-
 const portfolioData = {
     personal: {
         name: "Adeel Ahmed",
         role: "AI & Data Science Professional | STEM Educator",
-        image: "https://via.placeholder.com/150", // Replace with your image file name, e.g., "photo.jpg"
+        image: "photo.jpg",
         email: "adeelahmed4868@gmail.com",
-        linkedin: "#", // Add your LinkedIn URL
-        github: "#"    // Add your GitHub URL
+        linkedin: "https://www.linkedin.com/", // Replace with your LinkedIn profile link if desired
+        github: "https://github.com/"       // Replace with your GitHub profile link if desired
     },
     about: [
         "I am an AI researcher and STEM educator with an MS in Data Science (3.99 CGPA) from Riphah International University, a strong background in Mathematics, and over 9 years of teaching experience. I am actively seeking a Ph.D. in AI and NLP.",
@@ -33,7 +30,7 @@ const portfolioData = {
         "<strong>A. Ahmed</strong>, S. Riaz, M. Fareed. <em>'PEFT-mBERT: Benchmarking a Transformer-Based Encoder via Low-Rank and Activation-Based Adaptation for Resource-Efficient Punjabi Sentiment Analysis'</em>. 2026, ACM (Submitted).",
         "M. Fareed, J. Uddin, <strong>A. Ahmed</strong>, & MA Sattar. <em>'CXRG-SVLM: A Parameter-Efficient Small Vision-Language Model for Multi-View Chest X-ray Report Generation'</em>. 2026, Scientific Reports (Accepted).",
         "M. Fareed, J. Uddin, <strong>A. Ahmed</strong>, MA Nauman, N. Khan, M. Billah, & MA Sattar. <em>'A Systematic Review of LSTM Based Deep Learning Models for Healthcare and Medicine'</em>. 2026, PLOS One (Submitted).",
-        "Fareed, M., Fatima, M., Uddin, J., <strong>Ahmed, A.</strong>, & Sattar, M. A. <em>'A Systematic Review of Ethical Considerations of Large Language Models in Healthcare and Medicine'</em>. Frontiers in Digital Health (2025)."
+        "Fareed, M., Fatima, M., Uddin, J., <strong>Ahmed, A.</strong>, & Sattar, M. A. (2025). <em>'A Systematic Review of Ethical Considerations of Large Language Models in Healthcare and Medicine'</em>. Frontiers in Digital Health. https://doi.org/10.3389/fdgth.2025.1653631"
     ],
     experience: [
         {

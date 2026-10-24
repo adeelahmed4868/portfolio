@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <i class="fas fa-bars mobile-nav-toggle d-xl-none" id="mobile-toggle"></i>
+
+    <header id="header">
+        <div class="d-flex flex-column">
+            <div class="profile">
+                <img id="profile-img" src="" alt="Profile Image" class="img-fluid rounded-circle">
+                <h1 class="text-light"><a href="index.html" id="profile-name">Name</a></h1>
+                <div class="social-links text-center">
+                    <a id="linkedin-link" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a id="github-link" href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a id="email-link" href="#"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <nav id="navbar" class="nav-menu navbar">
+                <ul>
+                    <li><a href="#hero" class="nav-link"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                    <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> <span>About</span></a></li>
+                    <li><a href="#research" class="nav-link"><i class="fas fa-microscope"></i> <span>Research</span></a></li>
+                    <li><a href="#publications" class="nav-link"><i class="fas fa-book"></i> <span>Publications</span></a></li>
+                    <li><a href="#experience" class="nav-link"><i class="fas fa-chalkboard-teacher"></i> <span>Experience</span></a></li>
+                    <li><a href="#projects" class="nav-link"><i class="fas fa-laptop-code"></i> <span>Projects</span></a></li>
+                    <li><a href="#awards" class="nav-link"><i class="fas fa-award"></i> <span>Awards</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+        <div class="hero-container">
+            <h1 id="hero-name">Name</h1>
+            <p id="hero-role">Role</p>
+        </div>
+    </section>
+
+    <main id="main">
+        <section id="about" class="about section-bg">
+            <div class="container">
+                <div class="section-title"><h2>About</h2></div>
+                <div class="content" id="about-content"></div>
+            </div>
+        </section>
+
+        <section id="research" class="research">
+            <div class="container">
+                <div class="section-title"><h2>Research Interests</h2></div>
+                <div class="content">
+                    <ul id="research-list"></ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="publications section-bg">
+            <div class="container">
+                <div class="section-title"><h2>Selected Publications</h2></div>
+                <ul class="pub-list" id="pub-list"></ul>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <div class="container">
+                <div class="section-title"><h2>Teaching & Work Experience</h2></div>
+                <div id="experience-content"></div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects section-bg">
+            <div class="container">
+                <div class="section-title"><h2>Technical Projects</h2></div>
+                <div class="grid" id="projects-grid"></div>
+            </div>
+        </section>
+
+        <section id="awards" class="awards">
+            <div class="container">
+                <div class="section-title"><h2>Awards & Honors</h2></div>
+                <ul id="awards-list"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong id="footer-name">Name</strong>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Load Data and Application Logic -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+    
+    <script>
+        // Mobile toggle script
+        document.getElementById('mobile-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('mobile-nav-active');
+            this.classList.toggle('fa-bars');
+            this.classList.toggle('fa-times');
+        });
+    </script>
+</body>
+</html>

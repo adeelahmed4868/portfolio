@@ -8,22 +8,22 @@ const portfolioData = {
         github: "https://github.com/adeelahmed4868"
     },
     about: [
-        "I am an AI researcher and STEM educator with an MS in Data Science (3.99 CGPA) from Riphah International University, a strong background in Mathematics, and over 9 years of teaching experience. I am actively seeking a Ph.D. in AI and NLP.",
-        "My research focuses on parameter-efficient fine-tuning (PEFT) for low-resource environments, supported by a master's thesis and academic publications spanning multilingual NLP and medical vision-language models.",
-        "Alongside my research, I teach mathematics and physics at GHS Kot Pindi Das under the Punjab School Education Department."
+        "I hold an MS in Data Science from Riphah International University (CGPA 3.99/4.0) and a BS (Hons) in Mathematics. I bring over nine years of teaching experience to my work in AI and am seeking doctoral study in AI and natural language processing.",
+        "My research examines how pretrained models can be adapted when labeled data or compute is limited. My master’s thesis addressed sentiment analysis in low-resource languages, and my published collaborations span medical vision-language modeling and the ethics of language models in healthcare.",
+        "I teach mathematics and physics at GHS Kot Pindi Das under the Punjab School Education Department, with an emphasis on quantitative reasoning and the application of scientific concepts."
     ],
     research: [
         {
             title: "Parameter-Efficient Fine-Tuning (PEFT)",
-            description: "Investigating the computational efficacy of methods like LoRA and Activation-Based Adaptation (IA³) compared to Full Fine-Tuning."
+            description: "I evaluate the trade-offs among predictive accuracy, trainable parameter count, and hardware requirements when adapting pretrained models with LoRA and IA³."
         },
         {
             title: "Low-Resource Domain Adaptation",
-            description: "Benchmarking models like mBERT for morphologically rich, low-resource languages such as Punjabi and Roman Urdu."
+            description: "I investigate multilingual model adaptation for sentiment analysis in underrepresented languages, including Punjabi and Roman Urdu, where annotated data are limited and spelling conventions can vary."
         },
         {
             title: "Medical Vision-Language Models",
-            description: "Developing quantized, parameter-efficient small vision-language models (SVLM) for automated clinical report generation."
+            description: "I contribute to research on quantized vision-language models for chest X-ray report generation under limited computing resources."
         }
     ],
     publications: [
@@ -38,7 +38,7 @@ const portfolioData = {
             date: "Feb 2024 - Mar 2026",
             organization: "Riphah International University",
             duties: [
-                "Benchmarked PEFT architectures (LoRA and IA³) against Full Fine-Tuning on mBERT.",
+                "Designed comparative experiments on multilingual BERT to assess LoRA and IA³ against full fine-tuning for Punjabi sentiment classification.",
                 "Achieved 90.17% peak accuracy with LoRA, reducing storage from 681.28 MB to 10.13 MB and updating 1.07% of parameters.",
                 "IA³ reached 82.82% accuracy with 2.24 GB of GPU memory and a 2.91 MB storage footprint."
             ]
@@ -48,25 +48,25 @@ const portfolioData = {
             date: "2024 - 2026",
             organization: "Riphah International University",
             duties: [
-                "Helped build a small vision-language model that combines a frozen RAD-DINO image encoder and a 4-bit quantized Qwen2.5-3B language model.",
-                "Helped implement 4-bit QLoRA, limiting training to 1.91% of parameters and enabling training on a single 16 GB GPU."
+                "Contributed to a compact vision-language architecture pairing a frozen RAD-DINO image encoder with a 4-bit quantized Qwen2.5-3B language model.",
+                "Assisted with 4-bit QLoRA adaptation, enabling training on a single 16 GB GPU with 1.91% of loaded parameters trainable."
             ]
         }
     ],
     projects: [
         {
             title: "mBERT Fine-Tuning Benchmark",
-            description: "Compares six fine-tuning techniques across three sentiment analysis datasets.",
+            description: "Experimental benchmark comparing six fine-tuning techniques across three sentiment analysis datasets to assess accuracy and parameter efficiency.",
             url: "https://github.com/adeelahmed4868/AI-Engineering-Portfolio-Projects/tree/main/Fine_Tuning_mBERT_6_techniques_3_datasets_for_Sentiment_Analysis"
         },
         {
             title: "Vision-as-a-Service Web App",
-            description: "A web app and API for serving computer vision models.",
+            description: "A web application and API that expose computer vision models for inference.",
             url: "https://github.com/adeelahmed4868/AI-Engineering-Portfolio-Projects/tree/main/Project%2011%20Deploying%20a%20Vision-as-a-Service%20Web%20App"
         },
         {
             title: "Applied Data Science Lab",
-            description: "Eight WorldQuant University projects spanning predictive modeling, time-series analysis, and data engineering.",
+            description: "Eight applied projects from WorldQuant University covering predictive modeling, time-series forecasting, and data engineering workflows.",
             details: [
                 "Real estate price analysis and predictive pricing with linear regression",
                 "Air quality forecasting with ARMA and MongoDB",
@@ -79,7 +79,7 @@ const portfolioData = {
         },
         {
             title: "Applied ML and AI Projects",
-            description: "Classification, customer analytics, price forecasting, computer vision, transformers, and GPT-2 text generation.",
+            description: "Implementations across classification, customer analytics, and price forecasting, alongside computer vision, transformer-based sentiment analysis, and GPT-2 text generation.",
             url: "https://github.com/adeelahmed4868/AI-Engineering-Portfolio-Projects"
         }
     ],

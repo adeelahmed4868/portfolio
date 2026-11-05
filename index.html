@@ -47,7 +47,7 @@
         <div class="hero-container">
             <h1 id="hero-name">Adeel Ahmed</h1>
             <p id="hero-role">AI Researcher &amp; STEM Educator</p>
-            <p class="hero-summary">I research efficient fine-tuning for low-resource NLP and medical vision-language models. I teach mathematics and physics and volunteer to teach computer science, including Python and web development basics.</p>
+            <p class="hero-summary">My research focuses on parameter-efficient adaptation for low-resource NLP and medical vision-language models. I teach mathematics and physics and volunteer to teach computer science, including introductory Python and web development.</p>
             <div class="hero-actions"><a href="#publications">Read my research</a><a href="#teaching">Teaching experience</a><a href="mailto:adeelahmed4868@gmail.com">Email me</a><a href="https://www.linkedin.com/in/adeel-ahmed-8a3a82184">LinkedIn</a></div>
         </div>
     </section>
@@ -99,7 +99,7 @@
             <div class="container">
                 <div class="section-title"><h2>Thesis Work</h2></div>
                 <h3>Benchmarking PEFT Techniques for Low Resource Domain Adaptations in Sentiment Analysis</h3>
-                <p>I compared full fine-tuning (FFT) with six parameter-efficient methods on a pretrained transformer for sentiment analysis in Urdu, Roman Urdu, and Punjabi (Hindi style). I measured classification accuracy and the share of trainable parameters, including how the methods handled nonstandard Roman Urdu spelling.</p>
+                <p>My master’s thesis benchmarks full fine-tuning (FFT) and six parameter-efficient adaptation methods on a pretrained transformer for sentiment classification in Urdu, Roman Urdu, and Punjabi (Hindi style). The evaluation compares classification accuracy and the proportion of trainable parameters, with particular attention to spelling variation in Roman Urdu.</p>
                 <div class="table-scroll">
                     <table class="results-table">
                         <caption>Thesis accuracy by language</caption>
@@ -111,8 +111,8 @@
                         </tbody>
                     </table>
                 </div>
-                <p>Full fine-tuning gave the highest accuracy across all three datasets. LoRA was the strongest parameter-efficient method overall, updating about 1.06% of the model parameters while staying within 2 to 5 percentage points of the full fine-tuning results. AdaLoRA was also competitive on Roman Urdu and Punjabi.</p>
-                <p>Prefix Tuning varied sharply by dataset, scoring 81% on Punjabi and 33% on Roman Urdu. P-Tuning v2 scored 62–64%, and Prompt Tuning scored 52–60%. Prompt Tuning and IA³ each updated fewer than 0.02% of parameters. IA³ performed well on Roman Urdu, with lower accuracy on Urdu and Punjabi.</p>
+                <p>Full fine-tuning set the highest accuracy baseline on all three datasets. LoRA offered the strongest overall accuracy among the parameter-efficient methods, remaining within 2 to 5 percentage points of that baseline while updating about 1.06% of model parameters. AdaLoRA was also competitive on Roman Urdu and Punjabi.</p>
+                <p>Prefix Tuning showed substantial variation across datasets, reaching 81% accuracy on Punjabi and 33% on Roman Urdu. P-Tuning v2 achieved 62–64%, while Prompt Tuning achieved 52–60%. Prompt Tuning and IA³ each updated fewer than 0.02% of parameters. IA³ was strongest on Roman Urdu, indicating that parameter efficiency alone did not predict consistent performance across languages.</p>
             </div>
         </section>
 
@@ -132,7 +132,7 @@
                 <article class="card border-top-blue" id="peft-mbert-paper">
                     <h3>PEFT-mBERT: Punjabi Sentiment Analysis</h3>
                     <p>First-author manuscript · Submitted</p>
-                    <p>We benchmarked LoRA and IA³ against full fine-tuning of multilingual BERT for Punjabi sentiment classification. We ran experiments across multiple random seeds, estimated 95% confidence intervals, used McNemar’s test to compare predictions, and profiled GPU memory, inference latency, and model storage.</p>
+                    <p>This study evaluates LoRA and IA³ against full fine-tuning of multilingual BERT for Punjabi sentiment classification. The experimental design combines repeated runs across random seeds, 95% confidence intervals, and McNemar’s test with hardware profiling of peak GPU memory, inference latency, and model storage.</p>
                     <ul>
                         <li><strong>LoRA</strong> reached 90.17% peak accuracy versus 89.90% for full fine-tuning, while reducing storage from 681.28 MB to 10.13 MB. McNemar’s test found no statistically significant difference between their predictions (p = 0.2531).</li>
                         <li><strong>IA³</strong> reached 82.82% accuracy using 2.24 GB of GPU memory and 2.91 MB of model storage.</li>
@@ -148,15 +148,15 @@
                     <article class="card border-top-blue">
                         <h3>CXRG-SVLM: Chest X-ray Report Generation</h3>
                         <p><em>Scientific Reports</em> · 2026</p>
-                        <p><strong>My contribution:</strong> I collaborated on the small vision-language model and helped implement 4-bit QLoRA for efficient fine-tuning.</p>
-                        <p><strong>What the study found:</strong> The team combined frontal and lateral chest X-rays with clinical indication text to generate the Findings section of reports. On the Indiana University dataset, the model scored 0.3527 ROUGE-L and 0.2744 METEOR, with 1.91% of its loaded parameters trainable and an average generation time of 5.27 seconds per report on one GPU. The paper calls for follow-up evaluation by radiologists.</p>
+                        <p><strong>My contribution:</strong> I contributed to the development of the vision-language model and assisted with the implementation of 4-bit QLoRA for parameter-efficient adaptation.</p>
+                        <p><strong>What the study found:</strong> The model conditions generation of the Findings section on frontal and lateral chest radiographs and clinical indication text. Evaluation on the Indiana University dataset yielded ROUGE-L of 0.3527 and METEOR of 0.2744. The implementation trained 1.91% of loaded parameters and averaged 5.27 seconds per report on a single GPU. The authors identify radiologist evaluation as a next step.</p>
                         <p><a href="https://www.nature.com/articles/s41598-026-77203-3">Read the CXRG-SVLM abstract</a></p>
                     </article>
                     <article class="card border-top-blue">
                         <h3>Ethics of Large Language Models in Healthcare</h3>
                         <p><em>Frontiers in Digital Health</em> · 2025</p>
-                        <p><strong>My contribution:</strong> I contributed to formal analysis and helped review and edit the manuscript.</p>
-                        <p><strong>What the study found:</strong> The team reviewed 27 papers and identified bias, patient safety, transparency, accountability, and privacy as recurring concerns. The review proposed an initial framework for responsible use of large language models in healthcare.</p>
+                        <p><strong>My contribution:</strong> My contributions included formal analysis, critical review, and manuscript editing.</p>
+                        <p><strong>What the study found:</strong> The systematic review synthesized 27 studies and identified recurring concerns involving bias, patient safety, transparency, accountability, and privacy. The authors proposed a preliminary framework for the responsible use of large language models in healthcare.</p>
                         <p><a href="https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1653631/full">Read the healthcare ethics review</a></p>
                     </article>
                 </div>
@@ -172,12 +172,12 @@
                 <article class="resume-item">
                     <h4>Secondary School Educator · GHS Kot Pindi Das</h4>
                     <p>Current role</p>
-                    <p>I teach secondary school mathematics and physics. In mathematics, I guide students through problem-solving step by step. In physics, I use mathematical examples to connect classroom concepts with their applications.</p>
+                    <p>My instruction emphasizes structured mathematical reasoning and problem-solving. In physics, I use quantitative examples to connect theoretical principles with their applications.</p>
                 </article>
                 <article class="resume-item">
                     <h4>Secondary School Educator · Govt. M.P.E. High School</h4>
                     <p>Started July 2020 · Shahdara, Lahore</p>
-                    <p>I taught mathematics and physics to secondary school students and helped them prepare for their final examinations. Several students earned strong results and went on to colleges. The table shows the top Grade 10 marks recorded for each year.</p>
+                    <p>I taught secondary mathematics and physics and supported students in preparing for their final examinations. Several students achieved strong results and progressed to college. The table records the highest Grade 10 marks by year.</p>
                     <div class="table-scroll">
                         <table class="results-table">
                             <caption>Top Grade 10 exam results by year</caption>
@@ -193,12 +193,12 @@
                 <article class="resume-item">
                     <h4>Headmaster and Teacher · Govt. Elementary School</h4>
                     <p>July 2019 to July 2020 · Wandala Nasir Khan, Sheikhupura</p>
-                    <p>I led the school while continuing to teach, working with students, parents, and teachers to support classroom learning. I introduced whiteboards, a projector for visual lessons, a computer, and sports equipment. Grade 8 students achieved a 100% pass rate in their final examination.</p>
+                    <p>I combined school leadership with classroom teaching and worked with families and staff to support student learning. I introduced whiteboards, projection and computing resources, and sports equipment to support instruction and extracurricular activities. The Grade 8 cohort achieved a 100% pass rate in the final examination.</p>
                 </article>
                 <article class="resume-item">
                     <h4>Secondary School Educator · Govt. High School</h4>
                     <p>July 2017 to July 2019 · Hardev, Sheikhupura</p>
-                    <p>As class lead, I worked with parents to improve attendance and adapted my teaching and classroom routines to encourage student participation. The table compares school and board pass rates for the subjects I taught.</p>
+                    <p>As class lead, I worked with families to improve attendance and adapted instruction and classroom routines to increase participation. The table compares school and examination board pass rates in the subjects I taught.</p>
                     <div class="table-scroll">
                         <table class="results-table">
                             <caption>School pass rates compared with board pass rates</caption>
@@ -215,33 +215,33 @@
                 <article class="resume-item">
                     <h4>Home Tutor</h4>
                     <p>2014–2016 · Lahore</p>
-                    <p>While completing my mathematics degree, I tutored intermediate-level students in mathematics and physics. I encouraged regular practice and helped students prepare for examinations. Students achieved marks in the 80–90% range in these subjects.</p>
+                    <p>During my undergraduate studies, I provided individual tuition in mathematics and physics to intermediate-level students, emphasizing regular practice and examination preparation. Students achieved marks in the 80–90% range.</p>
                 </article>
                 <h3>Public service and field experience</h3>
                 <article class="resume-item">
                     <h4>Digital Census Data Collector · Pakistan Bureau of Statistics</h4>
                     <p>March–May 2023 · Lahore</p>
-                    <p>For Pakistan’s first digital census, I conducted door-to-door household interviews, recorded GPS locations, and entered and submitted records digitally. I coordinated with other enumerators and handled household information with care.</p>
+                    <p>I collected household data for Pakistan’s first digital census through in-person interviews, GPS tagging, and digital record submission. The role required coordination with fellow enumerators and careful handling of household information.</p>
                 </article>
                 <article class="resume-item">
                     <h4>Field Supervisor · Benazir Income Support Program</h4>
                     <p>February–May 2022 · Lahore</p>
-                    <p>I supervised a team of 10 collecting household information for the income support program. I coordinated fieldwork and community engagement and helped the team submit accurate records online on time.</p>
+                    <p>I supervised a 10-member field team collecting household data for the income support program. My responsibilities included coordinating fieldwork and community engagement and supporting accurate, timely electronic submission.</p>
                 </article>
                 <article class="resume-item">
                     <h4>Centre Superintendent · Board of Intermediate &amp; Secondary Education</h4>
                     <p>2019–2021 · Lahore</p>
-                    <p>I oversaw annual examination sessions for Grades 9 and 10 in 2019 and 2020 and for Grade 12 in 2021.</p>
+                    <p>I served as centre superintendent for the annual Grade 9 and 10 examinations in 2019 and 2020 and the Grade 12 examinations in 2021, overseeing examination sessions at the assigned centres.</p>
                 </article>
                 <article class="resume-item">
                     <h4>Centre Superintendent · Punjab Examination Commission</h4>
                     <p>2020 · Sheikhupura</p>
-                    <p>I supervised Grade 8 annual examinations, coordinating staff and seating, receiving question papers, keeping sessions on schedule, and submitting completed answer sheets.</p>
+                    <p>I administered Grade 8 annual examinations, coordinating invigilation staff, seating arrangements, receipt of question papers, session timing, and submission of completed scripts.</p>
                 </article>
                 <article class="resume-item">
                     <h4>Presiding Officer · Election Commission of Pakistan</h4>
                     <p>July 2018 · Sheikhupura</p>
-                    <p>During the general election, I supervised polling staff, prepared the polling station, oversaw voter identification and ballot security, and maintained order. I also oversaw vote counting, recorded the results, and sealed and transferred election materials.</p>
+                    <p>As presiding officer during the general election, I managed polling station operations, including staff supervision, voter verification, ballot security, and orderly conduct. I oversaw the count, recorded the results, and secured election materials for transfer.</p>
                 </article>
             </div>
         </section>
@@ -276,7 +276,7 @@
             <div class="container">
                 <div class="section-title"><h2>Volunteering &amp; Interests</h2></div>
                 <h3>Volunteer Computer Science Teaching</h3>
-                <p>I volunteer to teach computer science to help cover a shortage of computer science specialists.</p>
+                <p>I volunteer to provide computer science instruction in response to a shortage of specialist teachers, supporting students’ access to foundational computing skills.</p>
                 <h3>School committees</h3>
                 <ul>
                     <li>Refreshment Committee member at Govt. M.P.E. High School, Shahdara, Lahore.</li>
@@ -304,7 +304,7 @@
     </footer>
 
     <!-- Load Data and Application Logic -->
-    <script src="data.js?v=8"></script>
+    <script src="data.js?v=11"></script>
     <script src="app.js?v=3"></script>
     
 </body>

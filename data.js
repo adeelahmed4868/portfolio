@@ -84,10 +84,10 @@ const portfolioData = {
         }
     ],
     awards: [
-        "Ranked second throughout my school years.",
         "<strong>Vice Chancellor's Honors Award</strong> for Academic Excellence - Riphah International University",
         "<strong>Merit Scholarship</strong> during MS Data Science - Riphah International University",
         "<strong>2nd Position in Class</strong> during MS - Riphah International University",
-        "<strong>Merit Laptop Award</strong> from Punjab Govt. during BS Mathematics"
+        "<strong>Merit Laptop Award</strong> from Punjab Govt. during BS Mathematics",
+        "Ranked second throughout my school years."
     ]
 };

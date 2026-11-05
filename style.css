@@ -360,29 +360,22 @@ main .hero-actions a {
     color: #35576d;
     font-weight: 600;
 }
-.hero-focus-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
-    gap: 16px;
-    margin: 24px 0;
-}
-.hero-focus-grid > div {
-    padding: 16px 18px;
-    background: #fff;
-    border: 1px solid #d3dfe4;
-    border-left: 4px solid #226d82;
-    border-radius: 4px;
-}
-.hero-focus-grid h2 {
-    margin: 0 0 8px;
-    color: #133e59;
-    font-size: 18px;
-}
-#hero .hero-focus-grid p {
-    margin: 0;
+#hero .hero-summary {
+    max-width: 62ch;
     color: #243b4d;
-    font: inherit;
-    line-height: 1.55;
+    font-size: clamp(17px, 2vw, 21px);
+    line-height: 1.6;
+    margin: 18px 0 24px;
+}
+#hero h1::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 4px;
+    margin-top: 16px;
+    border-radius: 2px;
+    background: #226d82;
+    transform-origin: left center;
 }
 #experience .resume-item p {
     max-width: 76ch;
@@ -397,8 +390,14 @@ main .hero-actions a {
     scroll-margin-top: 32px;
 }
 @media (prefers-reduced-motion: no-preference) {
-    #hero .hero-container {
-        animation: academic-intro 450ms ease-out both;
+    #hero h1 {
+        animation: academic-intro 850ms 150ms ease-out both;
+    }
+    #hero h1::after {
+        animation: academic-underline 850ms 450ms ease-out both;
+    }
+    #hero-role, #hero .hero-summary, #hero .hero-actions {
+        animation: academic-intro 800ms 350ms ease-out both;
     }
     .hero-actions a {
         transition: background-color 180ms ease, transform 180ms ease;
@@ -408,6 +407,11 @@ main .hero-actions a {
     }
 }
 @keyframes academic-intro {
-    from { opacity: 0; transform: translateY(10px); }
+    from { opacity: 0; transform: translateY(18px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes academic-underline {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
 }

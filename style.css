@@ -148,19 +148,8 @@ section {
     min-height: min(560px, 75svh);
     display: flex;
     align-items: center;
-    background: #101c2d url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') top center;
-    background-size: cover;
+    background: linear-gradient(135deg, #f7f4eb, #e8f0f4);
     position: relative;
-}
-#hero:before {
-    content: "";
-    background: rgba(5, 13, 24, 0.7); /* Dark overlay */
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
 }
 #hero .hero-container {
     position: relative;
@@ -358,4 +347,67 @@ main .hero-actions a {
     border-bottom: 1px solid #ccd8e5;
     padding: 8px;
     text-align: left;
+}
+
+/* Academic introduction */
+#hero .hero-container {
+    max-width: 930px;
+}
+#hero h1 {
+    color: #122b43;
+}
+#hero #hero-role {
+    color: #35576d;
+    font-weight: 600;
+}
+.hero-focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 16px;
+    margin: 24px 0;
+}
+.hero-focus-grid > div {
+    padding: 16px 18px;
+    background: #fff;
+    border: 1px solid #d3dfe4;
+    border-left: 4px solid #226d82;
+    border-radius: 4px;
+}
+.hero-focus-grid h2 {
+    margin: 0 0 8px;
+    color: #133e59;
+    font-size: 18px;
+}
+#hero .hero-focus-grid p {
+    margin: 0;
+    color: #243b4d;
+    font: inherit;
+    line-height: 1.55;
+}
+#experience .resume-item p {
+    max-width: 76ch;
+    line-height: 1.6;
+}
+#experience .resume-item h4 + p {
+    margin-top: 0;
+    color: #405b6d;
+    font-weight: 600;
+}
+#teaching {
+    scroll-margin-top: 32px;
+}
+@media (prefers-reduced-motion: no-preference) {
+    #hero .hero-container {
+        animation: academic-intro 450ms ease-out both;
+    }
+    .hero-actions a {
+        transition: background-color 180ms ease, transform 180ms ease;
+    }
+    .hero-actions a:hover {
+        transform: translateY(-2px);
+    }
+}
+@keyframes academic-intro {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }

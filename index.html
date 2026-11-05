@@ -63,9 +63,42 @@
             <div class="container">
                 <div class="section-title"><h2>Education</h2></div>
                 <div class="grid">
-                    <article class="card"><h3>MS in Data Science</h3><p>Riphah International University, Lahore · Feb 2024 to Mar 2026 · CGPA 3.99/4.0</p><p><strong>Thesis</strong> — Benchmarking PEFT Techniques for Low Resource Domain Adaptations in Sentiment Analysis</p></article>
+                    <article class="card"><h3>MS in Data Science</h3><p>Riphah International University, Lahore · Feb 2024 to Mar 2026 · CGPA 3.99/4.0</p><p><strong>Subjects with distinction</strong></p>
+                        <ul>
+                            <li>Programming Fundamentals</li>
+                            <li>Data Science Tools &amp; Techniques</li>
+                            <li>Machine Learning</li>
+                            <li>Deep Learning</li>
+                            <li>Statistical &amp; Mathematical Methods</li>
+                            <li>Advanced Database Systems</li>
+                            <li>Professional Ethics I</li>
+                            <li>Big Data Analytics</li>
+                            <li>Cloud Computing Infrastructure &amp; Services</li>
+                        </ul>
+                        <p><a href="#thesis-work">Read about my thesis</a></p></article>
                     <article class="card"><h3>BS (Hons) in Mathematics</h3><p>University of Education, Lahore · Oct 2012 to Nov 2016 · CGPA 3.16/4.0</p><p>Distinctions in 12 courses: Calculus I–IV, Linear Algebra I, Number Theory, Computing Tools for Mathematics, Ordinary Differential Equations, Introduction to Algebraic Number Theory, General Topology, Introduction to Computers, and Real Analysis II.</p></article>
                 </div>
+            </div>
+        </section>
+
+        <section id="thesis-work" class="section-bg">
+            <div class="container">
+                <div class="section-title"><h2>Thesis Work</h2></div>
+                <h3>Benchmarking PEFT Techniques for Low Resource Domain Adaptations in Sentiment Analysis</h3>
+                <p>I compared full fine-tuning (FFT) with six parameter-efficient methods on a pretrained transformer for sentiment analysis in Urdu, Roman Urdu, and Punjabi (Hindi style). I measured classification accuracy and the share of trainable parameters, including how the methods handled nonstandard Roman Urdu spelling.</p>
+                <div class="table-scroll">
+                    <table class="results-table">
+                        <caption>Thesis accuracy by language</caption>
+                        <thead><tr><th scope="col">Method</th><th scope="col">Roman Urdu</th><th scope="col">Urdu</th><th scope="col">Punjabi</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Full fine-tuning</th><td>94%</td><td>90%</td><td>90%</td></tr>
+                            <tr><th scope="row">LoRA</th><td>92%</td><td>85%</td><td>85%</td></tr>
+                            <tr><th scope="row">IA³</th><td>87%</td><td>73%</td><td>75%</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Full fine-tuning gave the highest accuracy across all three datasets. LoRA was the strongest parameter-efficient method overall, updating about 1.06% of the model parameters while staying within 2 to 5 percentage points of the full fine-tuning results. AdaLoRA was also competitive on Roman Urdu and Punjabi.</p>
+                <p>Prefix Tuning varied sharply by dataset, scoring 81% on Punjabi and 33% on Roman Urdu. P-Tuning v2 scored 62–64%, and Prompt Tuning scored 52–60%. Prompt Tuning and IA³ each updated fewer than 0.02% of parameters. IA³ performed well on Roman Urdu, with lower accuracy on Urdu and Punjabi.</p>
             </div>
         </section>
 
@@ -82,6 +115,15 @@
             <div class="container">
                 <div class="section-title"><h2>Selected Publications</h2></div>
                 <ul class="pub-list" id="pub-list"></ul>
+                <article class="card border-top-blue" id="peft-mbert-paper">
+                    <h3>PEFT-mBERT: Punjabi Sentiment Analysis</h3>
+                    <p>First-author manuscript · Submitted</p>
+                    <p>We benchmarked LoRA and IA³ against full fine-tuning of multilingual BERT for Punjabi sentiment classification. We ran experiments across multiple random seeds, estimated 95% confidence intervals, used McNemar’s test to compare predictions, and profiled GPU memory, inference latency, and model storage.</p>
+                    <ul>
+                        <li><strong>LoRA</strong> reached 90.17% peak accuracy versus 89.90% for full fine-tuning, while reducing storage from 681.28 MB to 10.13 MB. McNemar’s test found no statistically significant difference between their predictions (p = 0.2531).</li>
+                        <li><strong>IA³</strong> reached 82.82% accuracy using 2.24 GB of GPU memory and 2.91 MB of model storage.</li>
+                    </ul>
+                </article>
             </div>
         </section>
 

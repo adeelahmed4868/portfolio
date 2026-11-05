@@ -10,7 +10,7 @@ const portfolioData = {
     about: [
         "I am an AI researcher and STEM educator with an MS in Data Science (3.99 CGPA) from Riphah International University, a strong background in Mathematics, and over 9 years of teaching experience. I am actively seeking a Ph.D. in AI and NLP.",
         "My research focuses on parameter-efficient fine-tuning (PEFT) for low-resource environments, supported by a master's thesis and academic publications spanning multilingual NLP and medical vision-language models.",
-        "Alongside my research, I serve as a Secondary School Teacher in Mathematics, Physics, and Computer Science under the Punjab School Education Department, where I integrate foundational Python programming into traditional STEM curricula."
+        "Alongside my research, I teach mathematics and physics at GHS Kot Pindi Das under the Punjab School Education Department. I also volunteer to teach computer science to help cover a shortage of specialists."
     ],
     research: [
         {

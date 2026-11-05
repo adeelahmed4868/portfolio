@@ -51,15 +51,6 @@ const portfolioData = {
                 "Helped build a small vision-language model that combines a frozen RAD-DINO image encoder and a 4-bit quantized Qwen2.5-3B language model.",
                 "Helped implement 4-bit QLoRA, limiting training to 1.91% of parameters and enabling training on a single 16 GB GPU."
             ]
-        },
-        {
-            title: "Secondary School Teacher (Math)",
-            date: "July 2017 - Present",
-            organization: "Punjab School Education Department",
-            duties: [
-                "Teach fundamental and practical Python programming, including variables, data types, loops, and problem-solving.",
-                "Teach physics through mathematical applications and use digital learning resources to support classroom instruction."
-            ]
         }
     ],
     projects: [
@@ -93,6 +84,7 @@ const portfolioData = {
         }
     ],
     awards: [
+        "Placed in the top three during school years.",
         "<strong>Vice Chancellor's Honors Award</strong> for Academic Excellence - Riphah International University",
         "<strong>Merit Scholarship</strong> during MS Data Science - Riphah International University",
         "<strong>2nd Position in Class</strong> during MS - Riphah International University",

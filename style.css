@@ -339,3 +339,23 @@ main .hero-actions a {
     cursor: pointer;
     color: #125f98;
 }
+
+.table-scroll {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+.results-table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+}
+.results-table caption {
+    font-weight: 600;
+    text-align: left;
+    padding: 0 0 8px;
+}
+.results-table th, .results-table td {
+    border-bottom: 1px solid #ccd8e5;
+    padding: 8px;
+    text-align: left;
+}

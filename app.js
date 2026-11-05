@@ -66,6 +66,26 @@ document.addEventListener("DOMContentLoaded", () => {
             <h3>${proj.title}</h3>
             <p>${proj.description}</p>
         `;
+        if (proj.url) {
+            const link = document.createElement("a");
+            link.href = proj.url;
+            link.textContent = "View source code";
+            link.setAttribute("aria-label", `View source code for ${proj.title}`);
+            div.appendChild(link);
+        }
+        if (proj.details) {
+            const details = document.createElement("details");
+            const summary = document.createElement("summary");
+            summary.textContent = "View lab projects";
+            const list = document.createElement("ul");
+            for (const project of proj.details) {
+                const item = document.createElement("li");
+                item.textContent = project;
+                list.appendChild(item);
+            }
+            details.append(summary, list);
+            div.appendChild(details);
+        }
         projContainer.appendChild(div);
     });
 
@@ -77,3 +97,39 @@ document.addEventListener("DOMContentLoaded", () => {
         awardsContainer.appendChild(li);
     });
 });
+
+const menuToggle = document.getElementById("mobile-toggle");
+const mobileLayout = window.matchMedia("(max-width: 1199px)");
+
+function setMenu(open) {
+    document.body.classList.toggle("mobile-nav-active", open);
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+    menuToggle.firstElementChild.className = open ? "fas fa-times" : "fas fa-bars";
+}
+
+menuToggle.addEventListener("click", () => {
+    setMenu(menuToggle.getAttribute("aria-expanded") === "false");
+    if (menuToggle.getAttribute("aria-expanded") === "true") {
+        document.querySelector("#navbar a").focus();
+    }
+});
+
+document.querySelectorAll("#navbar a").forEach(link => {
+    link.addEventListener("click", () => {
+        if (mobileLayout.matches) {
+            setMenu(false);
+            const section = document.querySelector(link.hash);
+            section.tabIndex = -1;
+            section.focus({ preventScroll: true });
+        }
+    });
+});
+
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+        setMenu(false);
+        menuToggle.focus();
+    }
+});
+mobileLayout.addEventListener("change", () => setMenu(false));

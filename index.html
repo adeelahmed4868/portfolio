@@ -3,52 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Portfolio</title>
+    <title>Adeel Ahmed | Academic Portfolio</title>
+    <meta name="description" content="Adeel Ahmed researches parameter-efficient fine-tuning, low-resource NLP, and medical vision-language models.">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
-    <i class="fas fa-bars mobile-nav-toggle d-xl-none" id="mobile-toggle"></i>
+    <button type="button" class="mobile-nav-toggle" id="mobile-toggle" aria-controls="header" aria-expanded="false" aria-label="Open navigation"><i class="fas fa-bars" aria-hidden="true"></i></button>
 
     <header id="header">
         <div class="d-flex flex-column">
             <div class="profile">
-                <img id="profile-img" src="" alt="Profile Image" class="img-fluid rounded-circle">
+                <img id="profile-img" src="photo.jpg" alt="Adeel Ahmed" class="img-fluid rounded-circle">
                 <h1 class="text-light"><a href="index.html" id="profile-name">Name</a></h1>
                 <div class="social-links text-center">
-                    <a id="linkedin-link" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a id="github-link" href="#" target="_blank"><i class="fab fa-github"></i></a>
-                    <a id="email-link" href="#"><i class="fas fa-envelope"></i></a>
+                    <a id="linkedin-link" aria-label="LinkedIn profile" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a id="github-link" aria-label="GitHub profile" href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a id="email-link" aria-label="Email Adeel Ahmed" href="#"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
             <nav id="navbar" class="nav-menu navbar">
                 <ul>
                     <li><a href="#hero" class="nav-link"><i class="fas fa-home"></i> <span>Home</span></a></li>
                     <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> <span>About</span></a></li>
+                    <li><a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i> <span>Education</span></a></li>
                     <li><a href="#research" class="nav-link"><i class="fas fa-microscope"></i> <span>Research</span></a></li>
                     <li><a href="#publications" class="nav-link"><i class="fas fa-book"></i> <span>Publications</span></a></li>
                     <li><a href="#experience" class="nav-link"><i class="fas fa-chalkboard-teacher"></i> <span>Experience</span></a></li>
                     <li><a href="#projects" class="nav-link"><i class="fas fa-laptop-code"></i> <span>Projects</span></a></li>
+                    <li><a href="#credentials" class="nav-link"><i class="fas fa-certificate"></i> <span>Skills &amp; Certifications</span></a></li>
                     <li><a href="#awards" class="nav-link"><i class="fas fa-award"></i> <span>Awards</span></a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <main id="main">
+    <section id="hero">
         <div class="hero-container">
-            <h1 id="hero-name">Name</h1>
-            <p id="hero-role">Role</p>
+            <h1 id="hero-name">Adeel Ahmed</h1>
+            <p id="hero-role">AI Researcher &amp; STEM Educator</p>
+            <p class="hero-focus">I study efficient fine-tuning for low-resource NLP and medical vision-language models.</p>
+            <div class="hero-actions"><a href="#publications">Read my research</a><a href="mailto:adeelahmed4868@gmail.com">Get in touch</a></div>
         </div>
     </section>
 
-    <main id="main">
         <section id="about" class="about section-bg">
             <div class="container">
                 <div class="section-title"><h2>About</h2></div>
                 <div class="content" id="about-content"></div>
+            </div>
+        </section>
+
+        <section id="education">
+            <div class="container">
+                <div class="section-title"><h2>Education</h2></div>
+                <div class="grid">
+                    <article class="card"><h3>MS in Data Science</h3><p>Riphah International University, Lahore · Feb 2024 to Mar 2026 · CGPA 3.99/4.0</p><p><strong>Thesis</strong> — Benchmarking PEFT Techniques for Low Resource Domain Adaptations in Sentiment Analysis</p></article>
+                    <article class="card"><h3>BS in Mathematics</h3><p>University of Education, Lahore · Aug 2012 to Sep 2016 · CGPA 3.16/4.0</p><p>Distinctions included Calculus, Linear Algebra I, Number Theory, and General Topology.</p></article>
+                </div>
             </div>
         </section>
 
@@ -82,6 +97,25 @@
             </div>
         </section>
 
+        <section id="credentials">
+            <div class="container">
+                <div class="section-title"><h2>Skills &amp; Certifications</h2></div>
+                <div class="grid">
+                    <article class="card"><h3>Technical skills</h3><p>Python, SQL, TensorFlow, scikit-learn, Hugging Face, Git, MySQL, SQLite, and MongoDB.</p><p>Deep learning, multimodal AI, model quantization, PEFT, computer vision, data engineering, and ETL.</p><p>Languages: Punjabi, Urdu, and English (IELTS 7.0 overall).</p></article>
+                    <article class="card"><h3>Selected certifications</h3><ul>
+                        <li>Applied Data Science Lab · WorldQuant University</li>
+                        <li>Data Analytics Essentials · Cisco</li>
+                        <li>Data Science Ethics · University of Michigan</li>
+                        <li>Introduction to AI · Arm</li>
+                        <li>NLP with Classification and Vector Spaces · DeepLearning.AI</li>
+                        <li>Generative AI Engineering &amp; Finetuning Transformers · IBM</li>
+                        <li>AI for Autonomous Vehicles and Robotics · University of Michigan</li>
+                        <li>Claude 101 and AI Fluency: Framework &amp; Foundations · Anthropic</li>
+                    </ul></article>
+                </div>
+            </div>
+        </section>
+
         <section id="awards" class="awards">
             <div class="container">
                 <div class="section-title"><h2>Awards & Honors</h2></div>
@@ -99,16 +133,8 @@
     </footer>
 
     <!-- Load Data and Application Logic -->
-    <script src="data.js"></script>
-    <script src="app.js"></script>
+    <script src="data.js?v=2"></script>
+    <script src="app.js?v=2"></script>
     
-    <script>
-        // Mobile toggle script
-        document.getElementById('mobile-toggle').addEventListener('click', function() {
-            document.body.classList.toggle('mobile-nav-active');
-            this.classList.toggle('fa-bars');
-            this.classList.toggle('fa-times');
-        });
-    </script>
 </body>
 </html>

@@ -415,3 +415,38 @@ main .hero-actions a {
     from { transform: scaleX(0); }
     to { transform: scaleX(1); }
 }
+
+.degree-details {
+    margin: 0 0 20px;
+}
+.degree-details div {
+    display: grid;
+    grid-template-columns: 6em 1fr;
+    gap: 8px;
+    padding: 6px 0;
+    border-bottom: 1px solid #d3dfe4;
+}
+.degree-details dt {
+    font-weight: 600;
+    color: #133e59;
+}
+.degree-details dd {
+    margin: 0;
+}
+.thesis-results {
+    max-width: none;
+    min-width: 650px;
+}
+.thesis-results meter {
+    display: block;
+    width: 100%;
+    min-width: 54px;
+    height: 12px;
+}
+.thesis-results td span {
+    font-variant-numeric: tabular-nums;
+}
+#thesis-results-note {
+    color: #405b6d;
+    font-size: 0.95rem;
+}

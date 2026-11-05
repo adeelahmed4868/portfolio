@@ -7,7 +7,7 @@
     <meta name="description" content="Adeel Ahmed researches parameter-efficient fine-tuning, low-resource NLP, and medical vision-language models.">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=10">
+    <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
 
@@ -63,7 +63,11 @@
             <div class="container">
                 <div class="section-title"><h2>Education</h2></div>
                 <div class="grid">
-                    <article class="card"><h3>MS in Data Science</h3><p>Riphah International University, Lahore · Feb 2024 to Mar 2026 · CGPA 3.99/4.0</p><p><strong>Subjects with distinction</strong></p>
+                    <article class="card"><h3>MS in Data Science</h3><dl class="degree-details">
+                            <div><dt>University</dt><dd>Riphah International University, Lahore</dd></div>
+                            <div><dt>Dates</dt><dd>Feb 2024 – Mar 2026</dd></div>
+                            <div><dt>CGPA</dt><dd>3.99/4.0</dd></div>
+                        </dl><p><strong>Subjects with distinction</strong></p>
                         <ul>
                             <li>Programming Fundamentals</li>
                             <li>Data Science Tools &amp; Techniques</li>
@@ -76,7 +80,11 @@
                             <li>Cloud Computing Infrastructure &amp; Services</li>
                         </ul>
                         <p><a href="#thesis-work">Read about my thesis</a></p></article>
-                    <article class="card"><h3>BS (Hons) in Mathematics</h3><p>University of Education, Lahore · Oct 2012 to Nov 2016 · CGPA 3.16/4.0</p><p><strong>Subjects with distinction</strong></p>
+                    <article class="card"><h3>BS (Hons) in Mathematics</h3><dl class="degree-details">
+                            <div><dt>University</dt><dd>University of Education, Lahore</dd></div>
+                            <div><dt>Dates</dt><dd>Oct 2012 – Nov 2016</dd></div>
+                            <div><dt>CGPA</dt><dd>3.16/4.0</dd></div>
+                        </dl><p><strong>Subjects with distinction</strong></p>
                         <ul>
                             <li>Calculus I</li>
                             <li>Calculus II</li>
@@ -101,16 +109,21 @@
                 <h3>Benchmarking PEFT Techniques for Low Resource Domain Adaptations in Sentiment Analysis</h3>
                 <p>My master’s thesis benchmarks full fine-tuning (FFT) and six parameter-efficient adaptation methods on a pretrained transformer for sentiment classification in Urdu, Roman Urdu, and Punjabi (Hindi style). The evaluation compares classification accuracy and the proportion of trainable parameters, with particular attention to spelling variation in Roman Urdu.</p>
                 <div class="table-scroll">
-                    <table class="results-table">
-                        <caption>Thesis accuracy by language</caption>
-                        <thead><tr><th scope="col">Method</th><th scope="col">Roman Urdu</th><th scope="col">Urdu</th><th scope="col">Punjabi</th></tr></thead>
+                    <table class="results-table thesis-results" aria-describedby="thesis-results-note">
+                        <caption>Thesis accuracy and trainable parameters by method</caption>
+                        <thead><tr><th scope="col">Method</th><th scope="col">Roman Urdu</th><th scope="col">Urdu</th><th scope="col">Punjabi</th><th scope="col">Trainable parameters</th><th scope="col">Other findings</th></tr></thead>
                         <tbody>
-                            <tr><th scope="row">Full fine-tuning</th><td>94%</td><td>90%</td><td>90%</td></tr>
-                            <tr><th scope="row">LoRA</th><td>92%</td><td>85%</td><td>85%</td></tr>
-                            <tr><th scope="row">IA³</th><td>87%</td><td>73%</td><td>75%</td></tr>
+                            <tr><th scope="row">Full fine-tuning</th><td><meter min="0" max="100" value="94" aria-hidden="true"></meter><span>94%</span></td><td><meter min="0" max="100" value="90" aria-hidden="true"></meter><span>90%</span></td><td><meter min="0" max="100" value="90" aria-hidden="true"></meter><span>90%</span></td><td>100%</td><td>Highest accuracy across all three datasets</td></tr>
+                            <tr><th scope="row">LoRA</th><td><meter min="0" max="100" value="92" aria-hidden="true"></meter><span>92%</span></td><td><meter min="0" max="100" value="85" aria-hidden="true"></meter><span>85%</span></td><td><meter min="0" max="100" value="85" aria-hidden="true"></meter><span>85%</span></td><td>About 1.06%</td><td>Strongest overall parameter-efficient method</td></tr>
+                            <tr><th scope="row">AdaLoRA</th><td>—</td><td>—</td><td>—</td><td>Similar to LoRA</td><td>Competitive on Roman Urdu and Punjabi</td></tr>
+                            <tr><th scope="row">Prefix Tuning</th><td><meter min="0" max="100" value="33" aria-hidden="true"></meter><span>33%</span></td><td>—</td><td><meter min="0" max="100" value="81" aria-hidden="true"></meter><span>81%</span></td><td>—</td><td>Results varied by language</td></tr>
+                            <tr><th scope="row">P-Tuning v2</th><td>—</td><td>—</td><td>—</td><td>—</td><td>62–64% accuracy overall</td></tr>
+                            <tr><th scope="row">Prompt Tuning</th><td>—</td><td>—</td><td>—</td><td>&lt;0.02%</td><td>52–60% accuracy overall</td></tr>
+                            <tr><th scope="row">IA³</th><td><meter min="0" max="100" value="87" aria-hidden="true"></meter><span>87%</span></td><td><meter min="0" max="100" value="73" aria-hidden="true"></meter><span>73%</span></td><td><meter min="0" max="100" value="75" aria-hidden="true"></meter><span>75%</span></td><td>&lt;0.02%</td><td>Strongest result on Roman Urdu</td></tr>
                         </tbody>
                     </table>
                 </div>
+                <p id="thesis-results-note">Bars show reported accuracy on a 0–100% scale. A dash indicates that the abstract did not give an exact value. Ranges and qualitative findings are shown in the final column.</p>
                 <p>Full fine-tuning set the highest accuracy baseline on all three datasets. LoRA offered the strongest overall accuracy among the parameter-efficient methods, remaining within 2 to 5 percentage points of that baseline while updating about 1.06% of model parameters. AdaLoRA was also competitive on Roman Urdu and Punjabi.</p>
                 <p>Prefix Tuning showed substantial variation across datasets, reaching 81% accuracy on Punjabi and 33% on Roman Urdu. P-Tuning v2 achieved 62–64%, while Prompt Tuning achieved 52–60%. Prompt Tuning and IA³ each updated fewer than 0.02% of parameters. IA³ was strongest on Roman Urdu, indicating that parameter efficiency alone did not predict consistent performance across languages.</p>
             </div>
@@ -172,7 +185,8 @@
                 <article class="resume-item">
                     <h4>Secondary School Educator · GHS Kot Pindi Das</h4>
                     <p>Current role</p>
-                    <p>My instruction emphasizes structured mathematical reasoning and problem-solving. In physics, I use quantitative examples to connect theoretical principles with their applications.</p>
+                    <p>I teach secondary mathematics and physics using Punjab’s Grade 9 and 10 textbooks. In mathematics, I guide students through real numbers, algebraic factorization, linear equations and inequalities, and quadratic equations. In physics, I teach measurement and units, motion and forces, and electrostatics. I use worked problems to help students interpret graphs, apply equations, and connect physical principles to everyday examples.</p>
+                    <p><a href="https://pectaa.edu.pk/books-and-publications/">Punjab secondary textbooks (PECTAA)</a></p>
                 </article>
                 <article class="resume-item">
                     <h4>Secondary School Educator · Govt. M.P.E. High School</h4>

@@ -57,12 +57,12 @@ const portfolioData = {
         {
             title: "mBERT Fine-Tuning Benchmark",
             description: "Experimental benchmark comparing six fine-tuning techniques across three sentiment analysis datasets to assess accuracy and parameter efficiency.",
-            url: "https://github.com/adeelahmed4868/AI-Engineering-Portfolio-Projects/tree/main/Fine_Tuning_mBERT_6_techniques_3_datasets_for_Sentiment_Analysis"
+            url: "https://github.com/adeelahmed4868/mbert-sentiment-analysis-benchmark"
         },
         {
             title: "Vision-as-a-Service Web App",
             description: "A web application and API that expose computer vision models for inference.",
-            url: "https://github.com/adeelahmed4868/AI-Engineering-Portfolio-Projects/tree/main/Project%2011%20Deploying%20a%20Vision-as-a-Service%20Web%20App"
+            url: "https://github.com/adeelahmed4868/vision-as-a-service"
         },
         {
             title: "Applied Data Science Lab",
@@ -96,6 +96,46 @@ const portfolioData = {
             title: "YOLO Object Detection",
             description: "Python script for real-time object detection with YOLO.",
             url: "https://github.com/adeelahmed4868/AI-Engineering-Portfolio-Projects/tree/main/Project_10_Object_Detection_YOLO"
+        },
+        {
+            title: "Spam Classifier",
+            description: "Identifies spam messages.",
+            url: "https://github.com/adeelahmed4868/spam-classifier"
+        },
+        {
+            title: "House Price Predictor",
+            description: "Estimates house prices from property data.",
+            url: "https://github.com/adeelahmed4868/house-price-predictor"
+        },
+        {
+            title: "Customer Segmentation",
+            description: "Groups customers with similar characteristics.",
+            url: "https://github.com/adeelahmed4868/customer-segmentation"
+        },
+        {
+            title: "Customer Churn Predictor",
+            description: "Predicts which customers are likely to leave.",
+            url: "https://github.com/adeelahmed4868/customer-churn-predictor"
+        },
+        {
+            title: "Handwritten Digit Classification",
+            description: "Recognizes handwritten digits.",
+            url: "https://github.com/adeelahmed4868/handwritten-digit-classification"
+        },
+        {
+            title: "CIFAR-10 Image Classification",
+            description: "Classifies images from CIFAR-10.",
+            url: "https://github.com/adeelahmed4868/cifar-10-image-classification"
+        },
+        {
+            title: "Transformer Sentiment Analysis",
+            description: "Classifies sentiment using transformers.",
+            url: "https://github.com/adeelahmed4868/sentiment-analysis-transformers"
+        },
+        {
+            title: "Enterprise LCEL RAG Engine",
+            description: "Implements retrieval-augmented generation with LangChain Expression Language.",
+            url: "https://github.com/adeelahmed4868/enterprise-lcel-rag-engine"
         }
     ],
     awards: [

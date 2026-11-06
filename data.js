@@ -67,8 +67,10 @@ const portfolioData = {
         {
             title: "Applied Data Science Lab",
             description: "Eight applied projects from WorldQuant University covering predictive modeling, time-series forecasting, and data engineering workflows.",
+            verification: "https://www.credly.com/badges/923bd7b8-6fa6-49db-8311-947cc9add862/academic_transcript",
             details: [
-                "Real estate price analysis and predictive pricing with linear regression",
+                "Real estate price analysis",
+                "Predictive real estate pricing with linear regression",
                 "Air quality forecasting with ARMA and MongoDB",
                 "Earthquake damage prediction with logistic regression and decision trees",
                 "Corporate bankruptcy classification with random forests and gradient boosting",
@@ -76,11 +78,6 @@ const portfolioData = {
                 "A/B testing and ETL with Python and chi-square tests",
                 "Financial asset volatility forecasting with GARCH"
             ]
-        },
-        {
-            title: "Applied ML and AI Projects",
-            description: "Implementations across classification, customer analytics, and price forecasting, alongside computer vision, transformer-based sentiment analysis, and GPT-2 text generation.",
-            url: "https://github.com/adeelahmed4868/AI-Engineering-Portfolio-Projects"
         },
         {
             title: "Gold Price Forecasting",

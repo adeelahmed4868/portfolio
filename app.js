@@ -66,21 +66,20 @@ document.addEventListener("DOMContentLoaded", () => {
             <h3>${proj.title}</h3>
             <p>${proj.description}</p>
         `;
-        if (proj.url) {
+        const projectLinks = [
+            [proj.notebook, "View forecasting notebook"],
+            [proj.url, "View source code"],
+            [proj.verification, "Verify lab credential"]
+        ];
+        for (const [url, label] of projectLinks) {
+            if (!url) continue;
             const link = document.createElement("a");
-            link.href = proj.url;
-            link.textContent = "View source code";
-            link.setAttribute("aria-label", `View source code for ${proj.title}`);
-            div.appendChild(link);
-        }
-        if (proj.notebook) {
-            const notebook = document.createElement("a");
-            notebook.href = proj.notebook;
-            notebook.textContent = "View notebook";
-            notebook.setAttribute("aria-label", `View notebook for ${proj.title}`);
-            const links = document.createElement("p");
-            links.appendChild(notebook);
-            div.appendChild(links);
+            link.href = url;
+            link.textContent = label;
+            link.setAttribute("aria-label", `${label} for ${proj.title}`);
+            const paragraph = document.createElement("p");
+            paragraph.appendChild(link);
+            div.appendChild(paragraph);
         }
         if (proj.details) {
             const details = document.createElement("details");

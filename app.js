@@ -84,11 +84,15 @@ document.addEventListener("DOMContentLoaded", () => {
         if (proj.details) {
             const details = document.createElement("details");
             const summary = document.createElement("summary");
-            summary.textContent = "View lab projects";
+            summary.textContent = "View all eight lab projects";
             const list = document.createElement("ul");
             for (const project of proj.details) {
                 const item = document.createElement("li");
-                item.textContent = project;
+                const title = document.createElement("strong");
+                title.textContent = project.title;
+                const description = document.createElement("p");
+                description.textContent = project.description;
+                item.append(title, description);
                 list.appendChild(item);
             }
             details.append(summary, list);

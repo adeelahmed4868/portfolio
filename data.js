@@ -69,14 +69,14 @@ const portfolioData = {
             description: "Eight applied projects from WorldQuant University covering predictive modeling, time-series forecasting, and data engineering workflows.",
             verification: "https://www.credly.com/badges/923bd7b8-6fa6-49db-8311-947cc9add862/academic_transcript",
             details: [
-                "Real estate price analysis",
-                "Predictive real estate pricing with linear regression",
-                "Air quality forecasting with ARMA and MongoDB",
-                "Earthquake damage prediction with logistic regression and decision trees",
-                "Corporate bankruptcy classification with random forests and gradient boosting",
-                "US consumer segmentation with K-means, PCA, and Plotly Dash",
-                "A/B testing and ETL with Python and chi-square tests",
-                "Financial asset volatility forecasting with GARCH"
+                { title: "Mexico City real estate analysis", description: "Cleaned and visualized property listings and used correlation analysis to explore how size and location relate to asking prices." },
+                { title: "Buenos Aires housing price prediction", description: "Built linear regression models to estimate housing prices and used Ridge and Lasso regularization to address overfitting." },
+                { title: "Nairobi air quality forecasting", description: "Queried air quality measurements in MongoDB and forecast particulate levels with autoregressive and ARMA models." },
+                { title: "Nepal earthquake damage classification", description: "Queried building records in SQLite and compared logistic regression and decision trees for predicting damage categories." },
+                { title: "Corporate bankruptcy prediction", description: "Trained random forest and gradient boosting classifiers on company records to identify bankruptcy risk despite an imbalance between classes." },
+                { title: "Consumer finance segmentation", description: "Used principal component analysis and K-means to identify groups in consumer finance data and explored those groups in a Plotly Dash dashboard." },
+                { title: "Applicant data and A/B testing", description: "Built a pipeline to extract, transform, and load applicant data and used chi-square tests to evaluate experiment outcomes." },
+                { title: "Financial volatility forecasting", description: "Used GARCH to estimate volatility from market data and packaged the forecasting workflow as a reproducible system." }
             ]
         },
         {

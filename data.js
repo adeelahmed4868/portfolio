@@ -84,6 +84,7 @@ const portfolioData = {
         },
         {
             title: "Gold Price Forecasting",
+            notebook: "https://github.com/adeelahmed4868/AI-Engineering-Portfolio-Projects/blob/main/Project-05-Gold-Price-Forecasting/Gold-Price-Forecasting.ipynb",
             description: "Python project for forecasting gold prices from historical time-series data.",
             url: "https://github.com/adeelahmed4868/AI-Engineering-Portfolio-Projects/tree/main/Project-05-Gold-Price-Forecasting"
         },

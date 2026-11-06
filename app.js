@@ -73,6 +73,15 @@ document.addEventListener("DOMContentLoaded", () => {
             link.setAttribute("aria-label", `View source code for ${proj.title}`);
             div.appendChild(link);
         }
+        if (proj.notebook) {
+            const notebook = document.createElement("a");
+            notebook.href = proj.notebook;
+            notebook.textContent = "View notebook";
+            notebook.setAttribute("aria-label", `View notebook for ${proj.title}`);
+            const links = document.createElement("p");
+            links.appendChild(notebook);
+            div.appendChild(links);
+        }
         if (proj.details) {
             const details = document.createElement("details");
             const summary = document.createElement("summary");

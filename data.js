@@ -69,15 +69,16 @@ const portfolioData = {
             description: "Eight applied projects from WorldQuant University covering predictive modeling, time-series forecasting, and data engineering workflows.",
             verification: "https://www.credly.com/badges/923bd7b8-6fa6-49db-8311-947cc9add862/academic_transcript",
             details: [
-                { title: "Mexico City real estate analysis", description: "Cleaned and visualized property listings and used correlation analysis to explore how size and location relate to asking prices." },
-                { title: "Buenos Aires housing price prediction", description: "Built linear regression models to estimate housing prices and used Ridge and Lasso regularization to address overfitting." },
-                { title: "Nairobi air quality forecasting", description: "Queried air quality measurements in MongoDB and forecast particulate levels with autoregressive and ARMA models." },
-                { title: "Nepal earthquake damage classification", description: "Queried building records in SQLite and compared logistic regression and decision trees for predicting damage categories." },
-                { title: "Corporate bankruptcy prediction", description: "Trained random forest and gradient boosting classifiers on company records to identify bankruptcy risk despite an imbalance between classes." },
-                { title: "Consumer finance segmentation", description: "Used principal component analysis and K-means to identify groups in consumer finance data and explored those groups in a Plotly Dash dashboard." },
-                { title: "Applicant data and A/B testing", description: "Built a pipeline to extract, transform, and load applicant data and used chi-square tests to evaluate experiment outcomes." },
-                { title: "Financial volatility forecasting", description: "Used GARCH to estimate volatility from market data and packaged the forecasting workflow as a reproducible system." }
-            ]
+                { title: "HOUSING IN MEXICO", description: "Learners use a dataset of 21,000 properties to determine if real estate prices are influenced more by property size or location. They import and clean data from a CSV file, build data visualizations, and examine the relationship between two variables using correlation." },
+                { title: "APARTMENT SALES IN BUENOS AIRES", description: "Learners build a linear regression model to predict apartment prices in Argentina. They create a data pipeline to impute missing values and encode categorical features, and they improve model performance by reducing overfitting." },
+                { title: "AIR QUALITY IN NAIROBI", description: "Learners build an ARMA time-series model to predict particulate matter levels in Kenya. They extract data from a MongoDB database using pymongo, and improve model performance through hyperparameter tuning." },
+                { title: "EARTHQUAKE DAMAGE IN NEPAL", description: "Learners build logistic regression and decision tree models to predict earthquake damage to buildings. They extract data from a SQLite database, and reveal the biases in data that can lead to discrimination." },
+                { title: "BANKRUPTCY IN POLAND", description: "Learners build random forest and gradient boosting models to predict whether a company will go bankrupt. They navigate the Linux command line, address imbalanced data through resampling, and consider the impact of performance metrics precision and recall." },
+                { title: "CUSTOMER SEGMENTATION IN THE US", description: "Learners build a k-means model to cluster US consumers into groups. They use principal component analysis (PCA) for data visualization, and they create an interactive dashboard with Plotly Dash." },
+                { title: "A/B TESTING AT WORLDQUANT UNIVERSITY", description: "Learners conduct a chi-square test to determine if sending an email can increase program enrollment at WQU. They build custom Python classes to implement an ETL process, and they create an interactive data application following a three-tiered design pattern." },
+                { title: "VOLATILITY FORECASTING IN INDIA", description: "Learners create a GARCH time series model to predict asset volatility. They acquire stock data through an API, clean and store it in a SQLite database, and build their own API to serve model predictions." }
+            ],
+            skills: ["API Design","Data Science","Data Visualization","Machine Learning","MongoDB","Python (Programming Language)","SQL","Statistics"]
         },
         {
             title: "Gold Price Forecasting",

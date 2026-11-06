@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const details = document.createElement("details");
             const summary = document.createElement("summary");
             summary.textContent = "View all eight lab projects";
-            const list = document.createElement("ul");
+            const list = document.createElement("ol");
             for (const project of proj.details) {
                 const item = document.createElement("li");
                 const title = document.createElement("strong");
@@ -97,6 +97,17 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             details.append(summary, list);
             div.appendChild(details);
+        }
+        if (proj.skills) {
+            const heading = document.createElement("h4");
+            heading.textContent = "Skills Gained";
+            const skills = document.createElement("ul");
+            for (const skill of proj.skills) {
+                const item = document.createElement("li");
+                item.textContent = skill;
+                skills.appendChild(item);
+            }
+            div.append(heading, skills);
         }
         projContainer.appendChild(div);
     });

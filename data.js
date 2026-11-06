@@ -81,6 +81,21 @@ const portfolioData = {
             title: "Applied ML and AI Projects",
             description: "Implementations across classification, customer analytics, and price forecasting, alongside computer vision, transformer-based sentiment analysis, and GPT-2 text generation.",
             url: "https://github.com/adeelahmed4868/AI-Engineering-Portfolio-Projects"
+        },
+        {
+            title: "Gold Price Forecasting",
+            description: "Python project for forecasting gold prices from historical time-series data.",
+            url: "https://github.com/adeelahmed4868/AI-Engineering-Portfolio-Projects/tree/main/Project-05-Gold-Price-Forecasting"
+        },
+        {
+            title: "GPT-2 Text Generation",
+            description: "Python script that uses GPT-2 to generate text from a prompt.",
+            url: "https://github.com/adeelahmed4868/AI-Engineering-Portfolio-Projects/tree/main/Project_09_Generative_AI_Text_GPT2"
+        },
+        {
+            title: "YOLO Object Detection",
+            description: "Python script for real-time object detection with YOLO.",
+            url: "https://github.com/adeelahmed4868/AI-Engineering-Portfolio-Projects/tree/main/Project_10_Object_Detection_YOLO"
         }
     ],
     awards: [

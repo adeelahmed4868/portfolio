@@ -519,3 +519,27 @@ main .hero-actions a {
         justify-self: start;
     }
 }
+
+.section-visual {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+.section-visual figure {
+    margin: 0;
+    max-width: 380px;
+}
+.section-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+@media (max-width: 760px) {
+    .section-visual {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+}

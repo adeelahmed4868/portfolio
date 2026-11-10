@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>${proj.description}</p>
         `;
         const projectLinks = [
-            [proj.notebook, "View forecasting notebook"],
+            [proj.notebook, "View notebook"],
             [proj.url, "View source code"],
             [proj.verification, "Verify lab credential"]
         ];

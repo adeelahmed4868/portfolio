@@ -56,6 +56,7 @@ const portfolioData = {
     projects: [
         {
             title: "mBERT Fine-Tuning Benchmark",
+            notebook: "https://github.com/adeelahmed4868/mbert-sentiment-analysis-benchmark/blob/main/Punjabi-Benchmark-Results.ipynb",
             description: "Experimental benchmark comparing six fine-tuning techniques across three sentiment analysis datasets to assess accuracy and parameter efficiency.",
             url: "https://github.com/adeelahmed4868/mbert-sentiment-analysis-benchmark"
         },
@@ -93,7 +94,7 @@ const portfolioData = {
         },
         {
             title: "YOLO Object Detection",
-            description: "Python script for real-time object detection with YOLO.",
+            description: "Python project that uses YOLO and OpenCV to detect objects in an image.",
             url: "https://github.com/adeelahmed4868/AI-Engineering-Portfolio-Projects/tree/main/Project_10_Object_Detection_YOLO"
         },
         {

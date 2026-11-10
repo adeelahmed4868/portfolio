@@ -41,18 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
     portfolioData.experience.forEach(exp => {
         const div = document.createElement("div");
         div.className = "resume-item";
-        
-        let dutiesHtml = "<ul>";
-        exp.duties.forEach(duty => {
-            dutiesHtml += `<li>${duty}</li>`;
-        });
-        dutiesHtml += "</ul>";
 
         div.innerHTML = `
             <h4>${exp.title}</h4>
             <h5>${exp.date}</h5>
             <p><em>${exp.organization}</em></p>
-            ${dutiesHtml}
         `;
         expContainer.appendChild(div);
     });

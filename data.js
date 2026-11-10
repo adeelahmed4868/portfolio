@@ -39,8 +39,8 @@ const portfolioData = {
             organization: "Riphah International University",
             duties: [
                 "Designed comparative experiments on multilingual BERT to assess LoRA and IA³ against full fine-tuning for Punjabi sentiment classification.",
-                "Achieved 90.17% peak accuracy with LoRA, reducing storage from 681.28 MB to 10.13 MB and updating 1.07% of parameters.",
-                "IA³ reached 82.82% accuracy with 2.24 GB of GPU memory and a 2.91 MB storage footprint."
+                "The manuscript reports 90.17% peak LoRA accuracy and a 10.13 MB model footprint. See Selected Research for the evaluation status.",
+                "Profiled accuracy, GPU memory, and model storage to compare adaptation methods."
             ]
         },
         {

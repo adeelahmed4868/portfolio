@@ -47,10 +47,37 @@
         <div class="hero-container">
             <h1 id="hero-name">Adeel Ahmed</h1>
             <p id="hero-role">AI Researcher &amp; STEM Educator</p>
-            <p class="hero-summary">My research focuses on parameter-efficient adaptation for low-resource NLP and medical vision-language models. I teach mathematics and physics and volunteer to teach computer science, including introductory Python and web development.</p>
-            <div class="hero-actions"><a href="#publications">Read my research</a><a href="#teaching">Teaching experience</a><a href="mailto:adeelahmed4868@gmail.com">Email me</a><a href="https://www.linkedin.com/in/adeel-ahmed-8a3a82184">LinkedIn</a></div>
+            <p class="hero-summary">I study how multilingual models can be adapted for underrepresented languages when labeled data and computing resources are limited. I also teach mathematics and physics and volunteer to teach computer science.</p>
+            <div class="hero-actions"><a href="#publications">Selected research</a><a href="cv.html">Academic CV</a><a href="https://github.com/adeelahmed4868">GitHub</a><a href="#teaching">Teaching experience</a><a href="mailto:adeelahmed4868@gmail.com">Email me</a><a href="https://www.linkedin.com/in/adeel-ahmed-8a3a82184">LinkedIn</a></div>
         </div>
     </section>
+
+        <section id="publications" class="publications section-bg">
+            <div class="container">
+                <div class="section-title"><h2>Selected Research</h2></div>
+                <article class="card border-top-blue" id="peft-mbert-paper">
+                    <h3>PEFT-mBERT: Punjabi Sentiment Analysis</h3>
+                    <p>First-author manuscript · Submitted</p>
+                    <p>I designed comparative mBERT experiments for Punjabi sentiment classification. The manuscript evaluates LoRA and IA³ against full fine-tuning of multilingual BERT for Punjabi sentiment classification. The experimental design combines repeated runs across random seeds, 95% confidence intervals, and McNemar’s test with hardware profiling of peak GPU memory, inference latency, and model storage.</p>
+                    <ul>
+                        <li><strong>LoRA</strong> was reported to reach 90.17% peak accuracy versus 89.90% for full fine-tuning, while reducing storage from 681.28 MB to 10.13 MB. McNemar’s test found no statistically significant difference between their predictions (p = 0.2531).</li>
+                        <li><strong>IA³</strong> was reported to reach 82.82% accuracy using 2.24 GB of GPU memory and 2.91 MB of model storage.</li>
+                    </ul>
+                    <p><strong>Evaluation status.</strong> These manuscript-reported figures are separate from the three-language thesis results below. The original split artifacts are unavailable in the public repository, and the figures have not been verified with the revised split workflow.</p>
+                    <p><a href="https://github.com/adeelahmed4868/mbert-sentiment-analysis-benchmark">Code and evaluation instructions</a> · <a href="https://github.com/adeelahmed4868/mbert-sentiment-analysis-benchmark/blob/main/Punjabi-Benchmark-Results.ipynb">Results notebook</a></p>
+                </article>
+                <article class="card border-top-blue">
+                    <h3>CXRG-SVLM: Chest X-ray Report Generation</h3>
+                    <p>Co-author · <em>Scientific Reports</em>, 2026</p>
+                    <p>I assisted with 4-bit QLoRA adaptation for a vision-language model that generates findings from frontal and lateral chest radiographs.</p>
+                    <p><a href="https://www.nature.com/articles/s41598-026-77203-3">Read the paper</a> · <a href="#contributions">Research contributions</a></p>
+                </article>
+                <h3>Peer-reviewed publications</h3>
+                <ul class="pub-list" id="pub-list"></ul>
+                <h3>Submitted manuscripts</h3>
+                <ul class="pub-list" id="manuscript-list"></ul>
+            </div>
+        </section>
 
         <section id="about" class="about section-bg">
             <div class="container">
@@ -142,6 +169,7 @@
                 <div class="section-title"><h2>Thesis Work</h2></div>
                 <h3>Benchmarking PEFT Techniques for Low Resource Domain Adaptations in Sentiment Analysis</h3>
                 <p>My master’s thesis benchmarks full fine-tuning (FFT) and six parameter-efficient adaptation methods on a pretrained transformer for sentiment classification in Urdu, Roman Urdu, and Punjabi (Hindi style). The evaluation compares classification accuracy and the proportion of trainable parameters, with particular attention to spelling variation in Roman Urdu.</p>
+                <p>The figures below come from the thesis comparison across three languages. The Punjabi manuscript is a separate evaluation and reports peak accuracy. The thesis abstract does not specify the split or seed aggregation behind these figures.</p>
                 <div class="table-scroll">
                     <table class="results-table thesis-results" aria-describedby="thesis-results-note">
                         <caption>Thesis accuracy and trainable parameters by method</caption>
@@ -172,21 +200,6 @@
             </div>
         </section>
 
-        <section id="publications" class="publications section-bg">
-            <div class="container">
-                <div class="section-title"><h2>Selected Publications</h2></div>
-                <ul class="pub-list" id="pub-list"></ul>
-                <article class="card border-top-blue" id="peft-mbert-paper">
-                    <h3>PEFT-mBERT: Punjabi Sentiment Analysis</h3>
-                    <p>First-author manuscript · Submitted</p>
-                    <p>This study evaluates LoRA and IA³ against full fine-tuning of multilingual BERT for Punjabi sentiment classification. The experimental design combines repeated runs across random seeds, 95% confidence intervals, and McNemar’s test with hardware profiling of peak GPU memory, inference latency, and model storage.</p>
-                    <ul>
-                        <li><strong>LoRA</strong> reached 90.17% peak accuracy versus 89.90% for full fine-tuning, while reducing storage from 681.28 MB to 10.13 MB. McNemar’s test found no statistically significant difference between their predictions (p = 0.2531).</li>
-                        <li><strong>IA³</strong> reached 82.82% accuracy using 2.24 GB of GPU memory and 2.91 MB of model storage.</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
 
         <section id="contributions">
             <div class="container">
@@ -217,6 +230,8 @@
                 <div id="experience-content"></div>
                 <h3 id="teaching">Educational Experience</h3>
                 <p class="teaching-intro">Since July 2017, I have taught mathematics and physics at the secondary level in Punjab’s government schools. I also volunteer to teach computer science to help address a shortage of specialists, introducing students to Python programming and the fundamentals of web development. Across these subjects, I help students develop analytical reasoning and apply it to practical problems.</p>
+                <details>
+                    <summary>View secondary teaching topics</summary>
                 <div class="teaching-subjects">
                     <div class="card">
                         <h4>Mathematics</h4>
@@ -268,6 +283,7 @@
                         </ul>
                     </div>
                 </div>
+                </details>
                 <p class="teaching-history-label"><strong>Current and previous teaching roles</strong></p>
                 <article class="resume-item">
                     <h4>Secondary School Educator · GHS Kot Pindi Das</h4>
@@ -313,6 +329,10 @@
             <div class="container">
                 <div class="section-title"><h2>Technical Projects</h2></div>
                 <div class="grid" id="projects-grid"></div>
+                <details>
+                    <summary>More projects</summary>
+                    <div class="grid" id="additional-projects-grid"></div>
+                </details>
             </div>
         </section>
 
@@ -367,8 +387,8 @@
     </footer>
 
     <!-- Load Data and Application Logic -->
-    <script src="data.js?v=21"></script>
-    <script src="app.js?v=21"></script>
+    <script src="data.js?v=22"></script>
+    <script src="app.js?v=22"></script>
     
 </body>
 </html>

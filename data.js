@@ -56,9 +56,8 @@ const portfolioData = {
     projects: [
         {
             title: "mBERT Fine-Tuning Benchmark",
-            notebook: "https://github.com/adeelahmed4868/mbert-sentiment-analysis-benchmark/blob/main/Punjabi-Benchmark-Results.ipynb",
-            description: "Experimental benchmark comparing six fine-tuning techniques across three sentiment analysis datasets to assess accuracy and parameter efficiency.",
-            url: "https://github.com/adeelahmed4868/mbert-sentiment-analysis-benchmark"
+
+            description: "Experimental benchmark comparing six fine-tuning techniques across three sentiment analysis datasets to assess accuracy and parameter efficiency. The private GitHub repository contains code for my master’s thesis and research paper."
         },
         {
             title: "Vision-as-a-Service Web App",

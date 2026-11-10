@@ -477,3 +477,36 @@ main .hero-actions a {
     margin: 0 0 16px;
     color: #133e59;
 }
+
+#hero .hero-container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1250px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(24px, 4vw, 52px);
+    margin: 0 auto;
+}
+.hero-lab {
+    margin: 0;
+}
+.hero-lab img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.hero-lab figcaption {
+    margin-top: 8px;
+    color: #405b6d;
+    font-size: 0.8rem;
+}
+@media (max-width: 760px) {
+    #hero .hero-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .hero-lab {
+        max-width: 390px;
+    }
+}

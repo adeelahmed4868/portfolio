@@ -450,3 +450,30 @@ main .hero-actions a {
     color: #405b6d;
     font-size: 0.95rem;
 }
+
+.teaching-intro {
+    max-width: 78ch;
+    line-height: 1.65;
+}
+.teaching-subjects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 225px), 1fr));
+    gap: 16px;
+    margin: 20px 0 28px;
+}
+.teaching-subjects .card {
+    padding: 18px;
+    border-top: 3px solid #226d82;
+}
+.teaching-subjects h4 {
+    color: #133e59;
+    margin: 0 0 12px;
+}
+.teaching-subjects ul {
+    margin: 0;
+    line-height: 1.5;
+}
+.teaching-history-label {
+    margin: 0 0 16px;
+    color: #133e59;
+}

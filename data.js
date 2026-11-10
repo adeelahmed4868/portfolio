@@ -39,7 +39,7 @@ const portfolioData = {
             organization: "Riphah International University",
             duties: [
                 "Designed comparative experiments on multilingual BERT to assess LoRA and IA³ against full fine-tuning for Punjabi sentiment classification.",
-                "The manuscript reports 90.17% peak LoRA accuracy and a 10.13 MB model footprint. See Selected Research for the evaluation status.",
+
                 "Profiled accuracy, GPU memory, and model storage to compare adaptation methods."
             ]
         },
@@ -57,7 +57,7 @@ const portfolioData = {
         {
             title: "mBERT Fine-Tuning Benchmark",
 
-            description: "Experimental benchmark comparing six fine-tuning techniques across three sentiment analysis datasets to assess accuracy and parameter efficiency. The private GitHub repository contains code for my master’s thesis and research paper."
+            description: "Compares full fine-tuning and six parameter-efficient methods for sentiment classification in Urdu, Roman Urdu, and Punjabi."
         },
         {
             title: "Vision-as-a-Service Web App",
@@ -82,19 +82,16 @@ const portfolioData = {
         },
         {
             title: "Gold Price Forecasting",
-            notebook: "https://github.com/adeelahmed4868/AI-Engineering-Portfolio-Projects/blob/main/Project-05-Gold-Price-Forecasting/Gold-Price-Forecasting.ipynb",
-            description: "Python project for forecasting gold prices from historical time-series data.",
-            url: "https://github.com/adeelahmed4868/AI-Engineering-Portfolio-Projects/tree/main/Project-05-Gold-Price-Forecasting"
+
+            description: "Python project for forecasting gold prices from historical time-series data. Source code is private."
         },
         {
             title: "GPT-2 Text Generation",
-            description: "Python script that uses GPT-2 to generate text from a prompt.",
-            url: "https://github.com/adeelahmed4868/AI-Engineering-Portfolio-Projects/tree/main/Project_09_Generative_AI_Text_GPT2"
+            description: "Python script that uses GPT-2 to generate text from a prompt. Source code is private."
         },
         {
             title: "YOLO Object Detection",
-            description: "Python project that uses YOLO and OpenCV to detect objects in an image.",
-            url: "https://github.com/adeelahmed4868/AI-Engineering-Portfolio-Projects/tree/main/Project_10_Object_Detection_YOLO"
+            description: "Python project that uses YOLO and OpenCV to detect objects in an image. Source code is private."
         },
         {
             title: "Spam Classifier",

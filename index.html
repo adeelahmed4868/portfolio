@@ -48,6 +48,7 @@
             <h1 id="hero-name">Adeel Ahmed</h1>
             <p id="hero-role">AI Researcher &amp; STEM Educator</p>
             <p class="hero-summary">I study how multilingual models can be adapted for underrepresented languages when labeled data and computing resources are limited. I also teach mathematics and physics and volunteer to teach computer science.</p>
+            <p class="hero-summary">My next research question is which adaptation methods remain reliable across languages when both labeled data and computing resources are scarce.</p>
             <div class="hero-actions"><a href="#publications">Selected research</a><a href="cv.html">Academic CV</a><a href="https://github.com/adeelahmed4868">GitHub</a><a href="#teaching">Teaching experience</a><a href="mailto:adeelahmed4868@gmail.com">Email me</a><a href="https://www.linkedin.com/in/adeel-ahmed-8a3a82184">LinkedIn</a></div>
         </div>
     </section>
@@ -55,22 +56,17 @@
         <section id="publications" class="publications section-bg">
             <div class="container">
                 <div class="section-title"><h2>Selected Research</h2></div>
-                <article class="card border-top-blue" id="peft-mbert-paper">
-                    <h3>PEFT-mBERT: Punjabi Sentiment Analysis</h3>
-                    <p>First-author manuscript · Submitted</p>
-                    <p>I designed comparative mBERT experiments for Punjabi sentiment classification. The manuscript evaluates LoRA and IA³ against full fine-tuning of multilingual BERT for Punjabi sentiment classification. The experimental design combines repeated runs across random seeds, 95% confidence intervals, and McNemar’s test with hardware profiling of peak GPU memory, inference latency, and model storage.</p>
-                    <ul>
-                        <li><strong>LoRA</strong> was reported to reach 90.17% peak accuracy versus 89.90% for full fine-tuning, while reducing storage from 681.28 MB to 10.13 MB. McNemar’s test found no statistically significant difference between their predictions (p = 0.2531).</li>
-                        <li><strong>IA³</strong> was reported to reach 82.82% accuracy using 2.24 GB of GPU memory and 2.91 MB of model storage.</li>
-                    </ul>
-                    <p><strong>Evaluation status.</strong> These manuscript-reported figures are separate from the three-language thesis results below. The original split artifacts are unavailable in the public repository, and the figures have not been verified with the revised split workflow.</p>
-                    <p>The private GitHub repository contains code for my master’s thesis and research paper.</p>
-                </article>
                 <article class="card border-top-blue">
                     <h3>CXRG-SVLM: Chest X-ray Report Generation</h3>
                     <p>Co-author · <em>Scientific Reports</em>, 2026</p>
                     <p>I assisted with 4-bit QLoRA adaptation for a vision-language model that generates findings from frontal and lateral chest radiographs.</p>
                     <p><a href="https://www.nature.com/articles/s41598-026-77203-3">Read the paper</a> · <a href="#contributions">Research contributions</a></p>
+                </article>
+                <article class="card border-top-blue" id="peft-mbert-paper">
+                    <h3>PEFT-mBERT: Punjabi Sentiment Analysis</h3>
+                    <p>First-author manuscript · Submitted · Evaluation being revisited</p>
+                    <p>I designed comparative mBERT experiments for Punjabi sentiment classification, comparing LoRA and IA³ with full fine-tuning and measuring model accuracy and computing requirements.</p>
+                    <p>I am reevaluating the methods with disjoint data splits and training-only oversampling. A private GitHub repository contains code for my master’s thesis and this manuscript.</p>
                 </article>
                 <h3>Peer-reviewed publications</h3>
                 <ul class="pub-list" id="pub-list"></ul>
@@ -169,25 +165,7 @@
                 <div class="section-title"><h2>Thesis Work</h2></div>
                 <h3>Benchmarking PEFT Techniques for Low Resource Domain Adaptations in Sentiment Analysis</h3>
                 <p>My master’s thesis benchmarks full fine-tuning (FFT) and six parameter-efficient adaptation methods on a pretrained transformer for sentiment classification in Urdu, Roman Urdu, and Punjabi (Hindi style). The evaluation compares classification accuracy and the proportion of trainable parameters, with particular attention to spelling variation in Roman Urdu.</p>
-                <p>The figures below come from the thesis comparison across three languages. The Punjabi manuscript is a separate evaluation and reports peak accuracy. The thesis abstract does not specify the split or seed aggregation behind these figures.</p>
-                <div class="table-scroll">
-                    <table class="results-table thesis-results" aria-describedby="thesis-results-note">
-                        <caption>Thesis accuracy and trainable parameters by method</caption>
-                        <thead><tr><th scope="col">Method</th><th scope="col">Roman Urdu</th><th scope="col">Urdu</th><th scope="col">Punjabi</th><th scope="col">Trainable parameters</th><th scope="col">Other findings</th></tr></thead>
-                        <tbody>
-                            <tr><th scope="row">Full fine-tuning</th><td><meter min="0" max="100" value="94" aria-hidden="true"></meter><span>94%</span></td><td><meter min="0" max="100" value="90" aria-hidden="true"></meter><span>90%</span></td><td><meter min="0" max="100" value="90" aria-hidden="true"></meter><span>90%</span></td><td>100%</td><td>Highest accuracy across all three datasets</td></tr>
-                            <tr><th scope="row">LoRA</th><td><meter min="0" max="100" value="92" aria-hidden="true"></meter><span>92%</span></td><td><meter min="0" max="100" value="85" aria-hidden="true"></meter><span>85%</span></td><td><meter min="0" max="100" value="85" aria-hidden="true"></meter><span>85%</span></td><td>About 1.06%</td><td>Strongest overall parameter-efficient method</td></tr>
-                            <tr><th scope="row">AdaLoRA</th><td>—</td><td>—</td><td>—</td><td>Similar to LoRA</td><td>Competitive on Roman Urdu and Punjabi</td></tr>
-                            <tr><th scope="row">Prefix Tuning</th><td><meter min="0" max="100" value="33" aria-hidden="true"></meter><span>33%</span></td><td>—</td><td><meter min="0" max="100" value="81" aria-hidden="true"></meter><span>81%</span></td><td>—</td><td>Results varied by language</td></tr>
-                            <tr><th scope="row">P-Tuning v2</th><td>—</td><td>—</td><td>—</td><td>—</td><td>62–64% accuracy overall</td></tr>
-                            <tr><th scope="row">Prompt Tuning</th><td>—</td><td>—</td><td>—</td><td>&lt;0.02%</td><td>52–60% accuracy overall</td></tr>
-                            <tr><th scope="row">IA³</th><td><meter min="0" max="100" value="87" aria-hidden="true"></meter><span>87%</span></td><td><meter min="0" max="100" value="73" aria-hidden="true"></meter><span>73%</span></td><td><meter min="0" max="100" value="75" aria-hidden="true"></meter><span>75%</span></td><td>&lt;0.02%</td><td>Strongest result on Roman Urdu</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p id="thesis-results-note">Bars show reported accuracy on a 0–100% scale. A dash indicates that the abstract did not give an exact value. Ranges and qualitative findings are shown in the final column.</p>
-                <p>Full fine-tuning set the highest accuracy baseline on all three datasets. LoRA offered the strongest overall accuracy among the parameter-efficient methods, remaining within 2 to 5 percentage points of that baseline while updating about 1.06% of model parameters. AdaLoRA was also competitive on Roman Urdu and Punjabi.</p>
-                <p>Prefix Tuning showed substantial variation across datasets, reaching 81% accuracy on Punjabi and 33% on Roman Urdu. P-Tuning v2 achieved 62–64%, while Prompt Tuning achieved 52–60%. Prompt Tuning and IA³ each updated fewer than 0.02% of parameters. IA³ was strongest on Roman Urdu, indicating that parameter efficiency alone did not predict consistent performance across languages.</p>
+                <p>I compared LoRA, AdaLoRA, prefix tuning, P-Tuning v2, prompt tuning, and IA³ with full fine-tuning. I am reviewing the data split procedure before sharing the thesis accuracy figures here.</p>
             </div>
         </section>
 
@@ -387,7 +365,7 @@
     </footer>
 
     <!-- Load Data and Application Logic -->
-    <script src="data.js?v=23"></script>
+    <script src="data.js?v=24"></script>
     <script src="app.js?v=22"></script>
     
 </body>

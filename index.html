@@ -7,7 +7,7 @@
     <meta name="description" content="Adeel Ahmed researches parameter-efficient fine-tuning, low-resource NLP, and medical vision-language models.">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=13">
+    <link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
 
@@ -16,7 +16,6 @@
     <header id="header">
         <div class="d-flex flex-column">
             <div class="profile">
-                <img id="profile-img" src="photo.jpg" alt="Adeel Ahmed" class="img-fluid rounded-circle">
                 <h1 class="text-light"><a href="index.html" id="profile-name">Name</a></h1>
                 <div class="social-links text-center">
                     <a id="linkedin-link" aria-label="LinkedIn profile" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -49,11 +48,11 @@
             <h1 id="hero-name">Adeel Ahmed</h1>
             <p id="hero-role">AI Researcher &amp; STEM Educator</p>
             <p class="hero-summary">I study how multilingual models can be adapted for underrepresented languages when labeled data and computing resources are limited. I also teach mathematics and physics and volunteer to teach computer science.</p>
-            <p class="hero-summary">My next question is how much labeled data methods such as LoRA and IA³ need to maintain reliable performance across Urdu, Roman Urdu, and Punjabi.</p>
+            <p class="hero-summary">My next question is how to deploy resource-efficient models on edge devices while maintaining accuracy and meeting limits on memory, latency, and energy use.</p>
             <div class="hero-actions"><a href="#publications">Selected research</a><a href="cv.html">Academic CV</a><a href="https://www.nature.com/articles/s41598-026-77203-3">Read the Scientific Reports paper</a><a href="https://github.com/adeelahmed4868">GitHub</a><a href="#teaching">Teaching experience</a><a href="mailto:adeelahmed4868@gmail.com">Email me</a><a href="https://www.linkedin.com/in/adeel-ahmed-8a3a82184">LinkedIn</a></div>
             </div>
-            <figure class="hero-lab">
-                <img src="ai-research-lab.webp" width="880" height="928" alt="AI-generated portrait of Adeel Ahmed working at a machine learning workstation">
+            <figure class="hero-headshot">
+                <img id="profile-img" src="photo.jpg" width="1299" height="1577" alt="Adeel Ahmed">
             </figure>
         </div>
     </section>
@@ -66,7 +65,7 @@
                     <article class="card border-top-blue">
                         <h4><a href="https://www.nature.com/articles/s41598-026-77203-3">CXRG-SVLM: A parameter-efficient small vision-language model for multi-view chest X-ray report generation in resource-constrained environments</a></h4>
                         <p>M. Fareed, J. Uddin, A. H. Sayyid, <strong>A. Ahmed</strong>, and M. A. Sattar. <em>Scientific Reports</em> 16, 35452 (2026).</p>
-                        <p><strong>My contribution.</strong> I contributed to model development and helped implement 4-bit QLoRA for parameter-efficient adaptation.</p>
+                        <p><strong>My contribution.</strong> I helped implement 4-bit QLoRA to adapt the quantized Qwen2.5-3B language model for chest X-ray report generation.</p>
                         <p>The study used frontal and lateral chest radiographs and clinical indication text to generate report findings. On the Indiana University dataset, the model achieved 0.3527 ROUGE-L and 0.2744 METEOR. It trained 1.91% of loaded parameters and averaged 5.27 seconds per report on one GPU. The paper identifies radiologist evaluation as a next step.</p>
                     </article>
                     <article class="card border-top-blue">
@@ -81,7 +80,7 @@
                     <h4>PEFT-mBERT: Benchmarking a Transformer-Based Encoder via Low-Rank and Activation-Based Adaptation for Resource-Efficient Punjabi Sentiment Analysis</h4>
                     <p><strong>A. Ahmed</strong>, S. Riaz, and M. Fareed (2026). First-author manuscript · Submitted · Evaluation being revisited.</p>
                     <p>I designed comparative mBERT experiments for Punjabi sentiment classification, comparing LoRA and IA³ with full fine-tuning and measuring model accuracy and computing requirements.</p>
-                    <p>I am reevaluating the methods with disjoint data splits and training-only oversampling. A private GitHub repository contains code for my master’s thesis and this manuscript.</p>
+                    <p>I am reevaluating the methods on a separate test split, with oversampling limited to the training data. I plan to report performance across random seeds alongside peak GPU memory and model size. A private GitHub repository contains code for my master’s thesis and this manuscript.</p>
                 </article>
                 <ul class="pub-list">
                     <li>M. Fareed, J. Uddin, <strong>A. Ahmed</strong>, M. A. Nauman, N. Khan, M. Billah, and M. A. Sattar. <em>A Systematic Review of LSTM Based Deep Learning Models for Healthcare and Medicine</em>. PLOS ONE (2026), submitted.</li>
@@ -93,6 +92,9 @@
             <div class="container">
                 <div class="section-title"><h2>About</h2></div>
                 <div class="content" id="about-content"></div>
+                <figure class="about-lab">
+                    <img src="ai-research-lab.webp" width="880" height="928" loading="lazy" alt="AI-generated portrait of Adeel Ahmed working at a machine learning workstation">
+                </figure>
             </div>
         </section>
 
@@ -262,7 +264,7 @@
                 </article>
                 <article class="resume-item">
                     <h4>Secondary School Educator · Govt. M.P.E. High School</h4>
-                    <p>Started July 2020 · Shahdara, Lahore</p>
+                    <p>Previous role · Started July 2020 · Shahdara, Lahore</p>
                 </article>
                 <article class="resume-item">
                     <h4>Headmaster and Teacher · Govt. Elementary School</h4>
@@ -358,7 +360,7 @@
     </footer>
 
     <!-- Load Data and Application Logic -->
-    <script src="data.js?v=25"></script>
+    <script src="data.js?v=26"></script>
     <script src="app.js?v=23"></script>
     
 </body>

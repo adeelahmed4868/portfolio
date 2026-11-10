@@ -43,7 +43,7 @@ const portfolioData = {
             organization: "Riphah International University",
             duties: [
                 "Contributed to a compact vision-language architecture pairing a frozen RAD-DINO image encoder with a 4-bit quantized Qwen2.5-3B language model.",
-                "Assisted with 4-bit QLoRA adaptation, enabling training on a single 16 GB GPU with 1.91% of loaded parameters trainable."
+                "Helped implement 4-bit QLoRA for the quantized Qwen2.5-3B component used in chest X-ray report generation."
             ]
         }
     ],

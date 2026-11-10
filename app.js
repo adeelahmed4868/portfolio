@@ -47,6 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
             <h5>${exp.date}</h5>
             <p><em>${exp.organization}</em></p>
         `;
+        const duties = document.createElement("ul");
+        for (const duty of exp.duties) {
+            const item = document.createElement("li");
+            item.textContent = duty;
+            duties.appendChild(item);
+        }
+        div.appendChild(duties);
         expContainer.appendChild(div);
     });
 

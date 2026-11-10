@@ -26,12 +26,6 @@ const portfolioData = {
             description: "I contribute to research on quantized vision-language models for chest X-ray report generation under limited computing resources."
         }
     ],
-    publications: [
-        "<strong>A. Ahmed</strong>, S. Riaz, M. Fareed. <em>'PEFT-mBERT: Benchmarking a Transformer-Based Encoder via Low-Rank and Activation-Based Adaptation for Resource-Efficient Punjabi Sentiment Analysis'</em>. 2026, ACM (Submitted).",
-        "M. Fareed, J. Uddin, A. H. Sayyid, <strong>A. Ahmed</strong>, &amp; M. A. Sattar. <a href='https://www.nature.com/articles/s41598-026-77203-3'><em>CXRG-SVLM: A parameter-efficient small vision-language model for multi-view chest X-ray report generation in resource-constrained environments</em></a>. Scientific Reports 16, 35452 (2026).",
-        "M. Fareed, J. Uddin, <strong>A. Ahmed</strong>, MA Nauman, N. Khan, M. Billah, & MA Sattar. <em>'A Systematic Review of LSTM Based Deep Learning Models for Healthcare and Medicine'</em>. 2026, PLOS One (Submitted).",
-        "Fareed, M., Fatima, M., Uddin, J., <strong>Ahmed, A.</strong>, & Sattar, M. A. (2025). <em>'A Systematic Review of Ethical Considerations of Large Language Models in Healthcare and Medicine'</em>. Frontiers in Digital Health. <a href='https://doi.org/10.3389/fdgth.2025.1653631'>Read the Frontiers article</a>"
-    ],
     experience: [
         {
             title: "Graduate Researcher",

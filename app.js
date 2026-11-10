@@ -28,15 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
         researchContainer.appendChild(li);
     });
 
-    // 4. Publications Section
-    const pubContainer = document.getElementById("pub-list");
-    portfolioData.publications.forEach(pub => {
-        const li = document.createElement("li");
-        li.innerHTML = pub;
-        const list = pub.includes("(Submitted)") ? document.getElementById("manuscript-list") : pubContainer;
-        list.appendChild(li);
-    });
-
     // 5. Experience Section
     const expContainer = document.getElementById("experience-content");
     portfolioData.experience.forEach(exp => {

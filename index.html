@@ -31,7 +31,7 @@
                     <li><a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i> <span>Education</span></a></li>
                     <li><a href="#research" class="nav-link"><i class="fas fa-microscope"></i> <span>Research</span></a></li>
                     <li><a href="#publications" class="nav-link"><i class="fas fa-book"></i> <span>Publications</span></a></li>
-                    <li><a href="#contributions" class="nav-link"><i class="fas fa-file-lines" aria-hidden="true"></i> <span>Paper Contributions</span></a></li>
+
                     <li><a href="#experience" class="nav-link"><i class="fas fa-chalkboard-teacher"></i> <span>Experience</span></a></li>
                     <li><a href="#projects" class="nav-link"><i class="fas fa-laptop-code"></i> <span>Projects</span></a></li>
                     <li><a href="#credentials" class="nav-link"><i class="fas fa-certificate"></i> <span>Skills &amp; Certifications</span></a></li>
@@ -49,8 +49,8 @@
             <h1 id="hero-name">Adeel Ahmed</h1>
             <p id="hero-role">AI Researcher &amp; STEM Educator</p>
             <p class="hero-summary">I study how multilingual models can be adapted for underrepresented languages when labeled data and computing resources are limited. I also teach mathematics and physics and volunteer to teach computer science.</p>
-            <p class="hero-summary">My next research question is which adaptation methods remain reliable across languages when both labeled data and computing resources are scarce.</p>
-            <div class="hero-actions"><a href="#publications">Selected research</a><a href="cv.html">Academic CV</a><a href="https://github.com/adeelahmed4868">GitHub</a><a href="#teaching">Teaching experience</a><a href="mailto:adeelahmed4868@gmail.com">Email me</a><a href="https://www.linkedin.com/in/adeel-ahmed-8a3a82184">LinkedIn</a></div>
+            <p class="hero-summary">My next question is how much labeled data methods such as LoRA and IA³ need to maintain reliable performance across Urdu, Roman Urdu, and Punjabi.</p>
+            <div class="hero-actions"><a href="#publications">Selected research</a><a href="cv.html">Academic CV</a><a href="https://www.nature.com/articles/s41598-026-77203-3">Read the Scientific Reports paper</a><a href="https://github.com/adeelahmed4868">GitHub</a><a href="#teaching">Teaching experience</a><a href="mailto:adeelahmed4868@gmail.com">Email me</a><a href="https://www.linkedin.com/in/adeel-ahmed-8a3a82184">LinkedIn</a></div>
             </div>
             <figure class="hero-lab">
                 <img src="ai-research-lab.webp" width="880" height="928" alt="AI-generated portrait of Adeel Ahmed working at a machine learning workstation">
@@ -61,22 +61,31 @@
         <section id="publications" class="publications section-bg">
             <div class="container">
                 <div class="section-title"><h2>Selected Research</h2></div>
-                <article class="card border-top-blue">
-                    <h3>CXRG-SVLM: Chest X-ray Report Generation</h3>
-                    <p>Co-author · <em>Scientific Reports</em>, 2026</p>
-                    <p>I assisted with 4-bit QLoRA adaptation for a vision-language model that generates findings from frontal and lateral chest radiographs.</p>
-                    <p><a href="https://www.nature.com/articles/s41598-026-77203-3">Read the paper</a> · <a href="#contributions">Research contributions</a></p>
-                </article>
+                <h3 id="contributions">Peer-reviewed publications</h3>
+                <div class="grid">
+                    <article class="card border-top-blue">
+                        <h4><a href="https://www.nature.com/articles/s41598-026-77203-3">CXRG-SVLM: A parameter-efficient small vision-language model for multi-view chest X-ray report generation in resource-constrained environments</a></h4>
+                        <p>M. Fareed, J. Uddin, A. H. Sayyid, <strong>A. Ahmed</strong>, and M. A. Sattar. <em>Scientific Reports</em> 16, 35452 (2026).</p>
+                        <p><strong>My contribution.</strong> I contributed to model development and helped implement 4-bit QLoRA for parameter-efficient adaptation.</p>
+                        <p>The study used frontal and lateral chest radiographs and clinical indication text to generate report findings. On the Indiana University dataset, the model achieved 0.3527 ROUGE-L and 0.2744 METEOR. It trained 1.91% of loaded parameters and averaged 5.27 seconds per report on one GPU. The paper identifies radiologist evaluation as a next step.</p>
+                    </article>
+                    <article class="card border-top-blue">
+                        <h4><a href="https://doi.org/10.3389/fdgth.2025.1653631">A systematic review of ethical considerations of large language models in healthcare and medicine</a></h4>
+                        <p>M. Fareed, M. Fatima, J. Uddin, <strong>A. Ahmed</strong>, and M. A. Sattar. <em>Frontiers in Digital Health</em> (2025).</p>
+                        <p><strong>My contribution.</strong> I contributed to formal analysis, critical review, and manuscript editing.</p>
+                        <p>The review synthesized 27 studies and identified recurring concerns about bias, patient safety, transparency, accountability, and privacy. We proposed a preliminary framework for responsible use of large language models in healthcare.</p>
+                    </article>
+                </div>
+                <h3>Submitted manuscripts</h3>
                 <article class="card border-top-blue" id="peft-mbert-paper">
-                    <h3>PEFT-mBERT: Punjabi Sentiment Analysis</h3>
-                    <p>First-author manuscript · Submitted · Evaluation being revisited</p>
+                    <h4>PEFT-mBERT: Benchmarking a Transformer-Based Encoder via Low-Rank and Activation-Based Adaptation for Resource-Efficient Punjabi Sentiment Analysis</h4>
+                    <p><strong>A. Ahmed</strong>, S. Riaz, and M. Fareed (2026). First-author manuscript · Submitted · Evaluation being revisited.</p>
                     <p>I designed comparative mBERT experiments for Punjabi sentiment classification, comparing LoRA and IA³ with full fine-tuning and measuring model accuracy and computing requirements.</p>
                     <p>I am reevaluating the methods with disjoint data splits and training-only oversampling. A private GitHub repository contains code for my master’s thesis and this manuscript.</p>
                 </article>
-                <h3>Peer-reviewed publications</h3>
-                <ul class="pub-list" id="pub-list"></ul>
-                <h3>Submitted manuscripts</h3>
-                <ul class="pub-list" id="manuscript-list"></ul>
+                <ul class="pub-list">
+                    <li>M. Fareed, J. Uddin, <strong>A. Ahmed</strong>, M. A. Nauman, N. Khan, M. Billah, and M. A. Sattar. <em>A Systematic Review of LSTM Based Deep Learning Models for Healthcare and Medicine</em>. PLOS ONE (2026), submitted.</li>
+                </ul>
             </div>
         </section>
 
@@ -184,27 +193,6 @@
         </section>
 
 
-        <section id="contributions">
-            <div class="container">
-                <div class="section-title"><h2>My Contributions to Published Papers</h2></div>
-                <div class="grid">
-                    <article class="card border-top-blue">
-                        <h3>CXRG-SVLM: Chest X-ray Report Generation</h3>
-                        <p><em>Scientific Reports</em> · 2026</p>
-                        <p><strong>My contribution:</strong> I contributed to the development of the vision-language model and assisted with the implementation of 4-bit QLoRA for parameter-efficient adaptation.</p>
-                        <p><strong>What the study found:</strong> The model conditions generation of the Findings section on frontal and lateral chest radiographs and clinical indication text. Evaluation on the Indiana University dataset yielded ROUGE-L of 0.3527 and METEOR of 0.2744. The implementation trained 1.91% of loaded parameters and averaged 5.27 seconds per report on a single GPU. The authors identify radiologist evaluation as a next step.</p>
-                        <p><a href="https://www.nature.com/articles/s41598-026-77203-3">Read the CXRG-SVLM abstract</a></p>
-                    </article>
-                    <article class="card border-top-blue">
-                        <h3>Ethics of Large Language Models in Healthcare</h3>
-                        <p><em>Frontiers in Digital Health</em> · 2025</p>
-                        <p><strong>My contribution:</strong> My contributions included formal analysis, critical review, and manuscript editing.</p>
-                        <p><strong>What the study found:</strong> The systematic review synthesized 27 studies and identified recurring concerns involving bias, patient safety, transparency, accountability, and privacy. The authors proposed a preliminary framework for the responsible use of large language models in healthcare.</p>
-                        <p><a href="https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1653631/full">Read the healthcare ethics review</a></p>
-                    </article>
-                </div>
-            </div>
-        </section>
 
         <section id="experience" class="experience">
             <div class="container">
@@ -370,8 +358,8 @@
     </footer>
 
     <!-- Load Data and Application Logic -->
-    <script src="data.js?v=24"></script>
-    <script src="app.js?v=22"></script>
+    <script src="data.js?v=25"></script>
+    <script src="app.js?v=23"></script>
     
 </body>
 </html>

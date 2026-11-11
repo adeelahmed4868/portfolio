@@ -911,3 +911,40 @@ html[data-motion="on"] {
 }
 #motion-toggle[hidden] { display: none; }
 #motion-toggle[aria-pressed="true"] { background: #174d86; color: white; }
+
+/* Give headings, project cards and the hero distinct movement. */
+@keyframes heading-slide {
+    from { opacity: .2; transform: translateX(-24px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes underline-grow {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+@keyframes project-enter {
+    from { opacity: .2; transform: translateY(30px) scale(.94); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes portrait-enter {
+    from { opacity: .15; transform: scale(.86) rotate(-4deg); }
+    to { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+html[data-motion="on"] {
+    .section-title.section-entrance { animation-name: heading-slide; }
+    .section-title.section-entrance h2::after {
+        transform-origin: left;
+        animation: underline-grow .65s ease-out var(--entrance-delay, 0ms) backwards;
+    }
+    .work-card.section-entrance { animation-name: project-enter; }
+    #hero .hero-portrait { animation: portrait-enter .85s .15s ease-out backwards; }
+    .work-card .card-image {
+        clip-path: inset(0);
+        transition: clip-path .35s ease, filter .35s ease;
+    }
+    .work-card:hover .card-image,
+    .work-card:focus-within .card-image {
+        clip-path: inset(5px round 8px);
+        filter: saturate(1.2);
+    }
+}

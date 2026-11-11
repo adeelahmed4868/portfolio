@@ -135,8 +135,10 @@ document.querySelectorAll("#navbar a").forEach(link => {
         if (mobileLayout.matches) {
             setMenu(false);
             const section = document.querySelector(link.hash);
-            section.tabIndex = -1;
-            section.focus({ preventScroll: true });
+            if (section) {
+                section.tabIndex = -1;
+                section.focus({ preventScroll: true });
+            }
         }
     });
 });
@@ -163,3 +165,28 @@ themeToggle.addEventListener("click", () => {
     applyTheme(dark);
     try { localStorage.setItem("portfolio-theme", dark ? "dark" : "light"); } catch {}
 });
+
+const navLinks = [...document.querySelectorAll("#navbar a")];
+function markCurrentLocation() {
+    const hash = window.location.hash || "#hero";
+    navLinks.forEach(link => {
+        if (link.hash === hash) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+    });
+}
+markCurrentLocation();
+window.addEventListener("hashchange", markCurrentLocation);
+
+if ("IntersectionObserver" in window && matchMedia("(prefers-reduced-motion: no-preference)").matches) {
+    const entranceObserver = new IntersectionObserver((entries, observer) => {
+        for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            if (!entry.target.contains(document.activeElement)) {
+                entry.target.classList.add("section-entrance");
+            }
+            observer.unobserve(entry.target);
+        }
+    }, { threshold: 0.12 });
+    document.querySelectorAll("main .section-title, .section-visual figure, .about-portrait")
+        .forEach(element => entranceObserver.observe(element));
+}

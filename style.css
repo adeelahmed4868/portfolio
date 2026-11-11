@@ -389,32 +389,6 @@ main .hero-actions a {
 #teaching {
     scroll-margin-top: 32px;
 }
-@media (prefers-reduced-motion: no-preference) {
-    #hero h1 {
-        animation: academic-intro 850ms 150ms ease-out both;
-    }
-    #hero h1::after {
-        animation: academic-underline 850ms 450ms ease-out both;
-    }
-    #hero-role, #hero .hero-summary, #hero .hero-actions {
-        animation: academic-intro 800ms 350ms ease-out both;
-    }
-    .hero-actions a {
-        transition: background-color 180ms ease, transform 180ms ease;
-    }
-    .hero-actions a:hover {
-        transform: translateY(-2px);
-    }
-}
-@keyframes academic-intro {
-    from { opacity: 0; transform: translateY(18px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes academic-underline {
-    from { transform: scaleX(0); }
-    to { transform: scaleX(1); }
-}
 
 .degree-details {
     margin: 0 0 20px;
@@ -753,4 +727,54 @@ main section a, .card summary, #footer a { color: var(--accent); }
     #hero .hero-actions { justify-content: start; }
     #hero .hero-actions .paper-link { text-align: left; }
     .hero-orbit { width: 125vw; }
+}
+
+/* Navigation and motion */
+.skip-link {
+    position: fixed;
+    top: 8px;
+    left: 12px;
+    z-index: 40;
+    padding: 10px 14px;
+    background: var(--surface);
+    color: var(--accent);
+    border-radius: 8px;
+    transform: translateY(-150%);
+}
+.skip-link:focus { transform: none; }
+a:focus-visible, button:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+#navbar a { padding-block: 12px; }
+#navbar a[aria-current="location"] {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: .35em;
+}
+#hero .hero-actions .pill:hover, .top-actions .pill:hover { border-color: var(--accent); }
+#hero .hero-actions .pill.primary:hover, .top-actions .pill.primary:hover { background: #78263f; }
+#hero .hero-actions .paper-link:hover { text-decoration-thickness: 2px; }
+.footer-layout a { overflow-wrap: anywhere; }
+@media (max-width: 800px) {
+    #navbar { max-height: calc(100svh - var(--header-height)); overflow-y: auto; }
+}
+@media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+    #hero #hero-role { animation: portfolio-appear .55s ease-out both; }
+    #hero h1 { animation: portfolio-appear .75s .08s ease-out both; }
+    #hero .hero-description { animation: portfolio-appear .6s .23s ease-out both; }
+    #hero .hero-actions { animation: portfolio-appear .6s .33s ease-out both; }
+    .hero-orbit { animation: portfolio-orbit 2s ease-out both; }
+    .section-entrance { animation: portfolio-appear .5s ease-out both; }
+    .pill, .top-actions button { transition: background-color .18s ease, border-color .18s ease, transform .18s ease; }
+    .pill:hover, .top-actions button:hover { transform: translateY(-2px); }
+}
+@keyframes portfolio-appear {
+    from { opacity: .25; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes portfolio-orbit {
+    from { opacity: 0; transform: translateX(-50%) rotate(-7deg) scale(.96); }
+    to { opacity: 1; transform: translateX(-50%) rotate(0) scale(1); }
 }

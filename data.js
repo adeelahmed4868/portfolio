@@ -81,54 +81,65 @@ const portfolioData = {
         },
         {
             title: "Gold Price Forecasting",
+            image: { src: "project-gold-forecast.webp", alt: "Gold bars beside a forecasting chart" },
 
             description: "Python project for forecasting gold prices from historical time-series data. Source code is private."
         },
         {
             title: "GPT-2 Text Generation",
+            image: { src: "project-gpt2.webp", alt: "Laptop showing an illustration of generated text" },
             description: "Python script that uses GPT-2 to generate text from a prompt. Source code is private."
         },
         {
             title: "YOLO Object Detection",
+            image: { src: "project-yolo.webp", alt: "Camera screen showing object detection boxes" },
             description: "Python project that uses YOLO and OpenCV to detect objects in an image. Source code is private."
         },
         {
             title: "Spam Classifier",
+            image: { src: "project-spam.webp", alt: "Envelopes beside an email filtering interface" },
             description: "Identifies spam messages.",
             url: "https://github.com/adeelahmed4868/spam-classifier"
         },
         {
             title: "House Price Predictor",
+            image: { src: "project-house-price.webp", alt: "Model house beside a calculator" },
             description: "Estimates house prices from property data.",
             url: "https://github.com/adeelahmed4868/house-price-predictor"
         },
         {
             title: "Customer Segmentation",
+            image: { src: "project-segmentation.webp", alt: "Beads sorted into color clusters" },
             description: "Groups customers with similar characteristics.",
             url: "https://github.com/adeelahmed4868/customer-segmentation"
         },
         {
             title: "Customer Churn Predictor",
+            image: { src: "project-churn.webp", alt: "Headset beside a customer analytics dashboard" },
             description: "Predicts which customers are likely to leave.",
             url: "https://github.com/adeelahmed4868/customer-churn-predictor"
         },
         {
             title: "Handwritten Digit Classification",
+            image: { src: "project-digits.webp", alt: "Handwritten digits on cards beside a tablet" },
             description: "Recognizes handwritten digits.",
             url: "https://github.com/adeelahmed4868/handwritten-digit-classification"
         },
         {
             title: "CIFAR-10 Image Classification",
+            image: { src: "project-cifar.webp", alt: "Toy airplane, truck, and frog representing image classes" },
             description: "Classifies images from CIFAR-10.",
             url: "https://github.com/adeelahmed4868/cifar-10-image-classification"
         },
         {
             title: "Transformer Sentiment Analysis",
+            image: { src: "project-sentiment.webp", alt: "Positive and negative sentiment icons on a laptop" },
             description: "Classifies sentiment using transformers.",
             url: "https://github.com/adeelahmed4868/sentiment-analysis-transformers"
         },
         {
             title: "Enterprise LCEL RAG Engine",
+            image: { src: "project-rag.webp", alt: "File folders beside a document retrieval interface" },
             description: "Implements retrieval-augmented generation with LangChain Expression Language.",
             url: "https://github.com/adeelahmed4868/enterprise-lcel-rag-engine"
         }

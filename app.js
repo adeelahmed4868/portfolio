@@ -26,11 +26,21 @@ document.addEventListener("DOMContentLoaded", () => {
         researchContainer.appendChild(li);
     });
 
+    function addCardImage(card, image) {
+        const picture = document.createElement("img");
+        picture.className = "card-image";
+        picture.src = image.src;
+        picture.alt = image.alt;
+        picture.loading = "lazy";
+        picture.decoding = "async";
+        card.prepend(picture);
+    }
+
     // 5. Experience Section
     const expContainer = document.getElementById("experience-content");
     portfolioData.experience.forEach(exp => {
         const div = document.createElement("div");
-        div.className = "resume-item";
+        div.className = "card experience-card";
 
         div.innerHTML = `
             <h4>${exp.title}</h4>
@@ -44,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             duties.appendChild(item);
         }
         div.appendChild(duties);
+        if (exp.image) addCardImage(div, exp.image);
         expContainer.appendChild(div);
     });
 
@@ -57,6 +68,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <h3>${proj.title}</h3>
             <p>${proj.description}</p>
         `;
+        if (proj.image) {
+            div.classList.add("work-card");
+            addCardImage(div, proj.image);
+        }
         const projectLinks = [
             [proj.notebook, "View notebook"],
             [proj.url, "View source code"],

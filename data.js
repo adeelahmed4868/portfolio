@@ -29,6 +29,7 @@ const portfolioData = {
     experience: [
         {
             title: "Graduate Researcher",
+            image: { src: "edge-computing-research.webp", alt: "Illustration of compact computing hardware on a research workbench" },
             date: "Feb 2024 - Mar 2026",
             organization: "Riphah International University",
             duties: [
@@ -39,6 +40,7 @@ const portfolioData = {
         },
         {
             title: "AI Research Collaborator",
+            image: { src: "ai-research-lab.webp", alt: "Illustration of Adeel reviewing model outputs at a computing workstation" },
             date: "2024 - 2026",
             organization: "Riphah International University",
             duties: [
@@ -50,16 +52,19 @@ const portfolioData = {
     projects: [
         {
             title: "mBERT Fine-Tuning Benchmark",
+            image: { src: "mbert-benchmark.webp", alt: "Illustration of a laptop with a research notebook and model comparison charts" },
 
             description: "Compares full fine-tuning and six parameter-efficient methods for sentiment classification in Urdu, Roman Urdu, and Punjabi."
         },
         {
             title: "Vision-as-a-Service Web App",
+            image: { src: "vision-project.webp", alt: "Illustration of object detection boxes around objects on a laptop screen" },
             description: "A web application and API that expose computer vision models for inference.",
             url: "https://github.com/adeelahmed4868/vision-as-a-service"
         },
         {
             title: "Applied Data Science Lab",
+            image: { src: "data-science-project.webp", alt: "Illustration of a laptop with a data analysis dashboard" },
             description: "Eight applied projects from WorldQuant University covering predictive modeling, time-series forecasting, and data engineering workflows.",
             verification: "https://www.credly.com/badges/923bd7b8-6fa6-49db-8311-947cc9add862/academic_transcript",
             details: [

@@ -836,3 +836,43 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
     #hero .hero-heading h1 { font-size: clamp(36px, 8vw, 54px); }
     #hero .hero-credential { font-size: .8rem; margin-top: 12px; }
 }
+
+.featured-work,
+.experience-cards {
+    display: grid;
+    gap: clamp(14px, 2.4vw, 24px);
+    margin-bottom: 24px;
+}
+.featured-work { grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+.experience-cards { grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); }
+.work-card,
+.experience-card {
+    overflow: hidden;
+    padding: 0 0 18px;
+    box-shadow: 0 12px 28px #2418200c;
+}
+.card-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    background: var(--line);
+}
+.experience-card .card-image { aspect-ratio: 2 / 1; }
+.experience-card:nth-child(2) .card-image { object-position: center 27%; }
+.work-card > :not(.card-image),
+.experience-card > :not(.card-image) {
+    margin-inline: 20px;
+}
+.experience-card h5 {
+    margin-block: 0;
+    color: var(--muted);
+    font-size: .85rem;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .work-card, .experience-card { transition: transform .2s ease, box-shadow .2s ease; }
+    .work-card:hover, .experience-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 16px 32px #2418201c;
+    }
+}

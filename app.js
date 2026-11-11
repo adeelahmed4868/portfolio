@@ -201,6 +201,11 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
     const observer = new IntersectionObserver((entries) => {
         let delay = 0;
+        // Start with the highest visible item, then follow reading order.
+        entries.sort((a, b) =>
+            a.boundingClientRect.top - b.boundingClientRect.top ||
+            a.boundingClientRect.left - b.boundingClientRect.left
+        );
         for (const { target, isIntersecting } of entries) {
             if (!isIntersecting) {
                 target.classList.remove("section-entrance");
@@ -209,9 +214,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (target.contains(document.activeElement)) continue;
             target.style.setProperty("--entrance-delay", `${delay}ms`);
             target.classList.add("section-entrance");
-            delay = Math.min(delay + 85, 255);
+            delay = Math.min(delay + 95, 285);
         }
-    }, { rootMargin: "0px 0px -14% 0px" });
+    }, { rootMargin: "0px 0px -19% 0px" });
 
     document.querySelectorAll(targets.join(", ")).forEach(element => {
         if (!element.parentElement.closest(targets.join(", "))) observer.observe(element);

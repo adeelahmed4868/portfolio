@@ -767,7 +767,7 @@ html[data-motion="on"] {
     #hero .hero-actions { animation: portfolio-appear .6s .33s ease-out both; }
     .hero-orbit { animation: portfolio-orbit 2s ease-out both; }
     .section-entrance {
-        animation: portfolio-scroll-in .9s cubic-bezier(.2, .7, .3, 1) var(--entrance-delay, 0ms) backwards;
+        animation: portfolio-scroll-in 1.05s cubic-bezier(.2, .65, .3, 1) var(--entrance-delay, 0ms) backwards;
     }
     .section-entrance:focus-within { animation: none; }
     .pill, .top-actions button { transition: background-color .18s ease, border-color .18s ease, transform .18s ease; }
@@ -914,7 +914,7 @@ html[data-motion="on"] {
 
 /* Give headings, project cards and the hero distinct movement. */
 @keyframes heading-slide {
-    from { opacity: .2; transform: translateX(-24px); }
+    from { opacity: .2; transform: translateX(-36px); }
     to { opacity: 1; transform: translateX(0); }
 }
 @keyframes underline-grow {
@@ -922,7 +922,7 @@ html[data-motion="on"] {
     to { transform: scaleX(1); }
 }
 @keyframes project-enter {
-    from { opacity: .2; transform: translateY(30px) scale(.94); }
+    from { opacity: .2; transform: translateY(44px) scale(.92); }
     to { opacity: 1; transform: translateY(0) scale(1); }
 }
 @keyframes portrait-enter {
@@ -934,7 +934,7 @@ html[data-motion="on"] {
     .section-title.section-entrance { animation-name: heading-slide; }
     .section-title.section-entrance h2::after {
         transform-origin: left;
-        animation: underline-grow .65s ease-out var(--entrance-delay, 0ms) backwards;
+        animation: underline-grow .7s cubic-bezier(.2, .65, .3, 1) calc(var(--entrance-delay, 0ms) + 120ms) backwards;
     }
     .work-card.section-entrance { animation-name: project-enter; }
     #hero .hero-portrait { animation: portrait-enter .85s .15s ease-out backwards; }
@@ -950,15 +950,15 @@ html[data-motion="on"] {
 }
 
 @keyframes enter-from-left {
-    from { opacity: .12; transform: translateX(-52px); }
+    from { opacity: .12; transform: translateX(-76px); }
     to { opacity: 1; transform: translateX(0); }
 }
 @keyframes enter-from-right {
-    from { opacity: .12; transform: translateX(52px); }
+    from { opacity: .12; transform: translateX(76px); }
     to { opacity: 1; transform: translateX(0); }
 }
 @keyframes enter-from-depth {
-    from { opacity: .12; transform: perspective(700px) translateZ(-180px); }
+    from { opacity: .12; transform: perspective(700px) translateZ(-260px); }
     to { opacity: 1; transform: perspective(700px) translateZ(0); }
 }
 @keyframes reveal-image {
@@ -999,9 +999,9 @@ html[data-motion="on"] {
     .section-entrance:focus-within { animation: none; }
 
     @media (max-width: 600px) {
-        .grid > .card.section-entrance,
-        .work-card.section-entrance,
-        .experience-card.section-entrance {
+        .grid > .card.section-entrance:nth-child(n),
+        .work-card.section-entrance:nth-child(n),
+        .experience-card.section-entrance:nth-child(n) {
             animation-name: project-enter;
         }
         .section-entrance:focus-within { animation: none; }

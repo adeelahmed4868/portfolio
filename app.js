@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const menuToggle = document.getElementById("mobile-toggle");
-const mobileLayout = window.matchMedia("(max-width: 800px)");
+const mobileLayout = window.matchMedia("(max-width: 1050px)");
 
 function setMenu(open) {
     document.body.classList.toggle("mobile-nav-active", open);

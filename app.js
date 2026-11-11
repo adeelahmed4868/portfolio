@@ -211,7 +211,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 target.classList.remove("section-entrance");
                 continue;
             }
-            if (target.contains(document.activeElement)) continue;
             target.style.setProperty("--entrance-delay", `${delay}ms`);
             target.classList.add("section-entrance");
             delay = Math.min(delay + 95, 285);
@@ -219,7 +218,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { rootMargin: "0px 0px -19% 0px" });
 
     document.querySelectorAll(targets.join(", ")).forEach(element => {
-        if (!element.parentElement.closest(targets.join(", "))) observer.observe(element);
+        if (element.parentElement.closest(targets.join(", "))) return;
+        element.classList.add("scroll-reveal");
+        observer.observe(element);
     });
 });
 

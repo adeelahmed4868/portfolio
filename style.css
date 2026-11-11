@@ -774,7 +774,7 @@ html[data-motion="on"] {
     .pill:hover, .top-actions button:hover { transform: translateY(-2px); }
 }
 @keyframes portfolio-appear {
-    from { opacity: .25; transform: translateY(14px); }
+    from { opacity: 0; transform: translateY(14px); }
     to { opacity: 1; transform: translateY(0); }
 }
 @keyframes portfolio-orbit {
@@ -881,7 +881,7 @@ html[data-motion="on"] {
 }
 
 @keyframes portfolio-scroll-in {
-    from { opacity: .12; transform: translateY(48px); }
+    from { opacity: 0; transform: translateY(48px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
@@ -914,7 +914,7 @@ html[data-motion="on"] {
 
 /* Give headings, project cards and the hero distinct movement. */
 @keyframes heading-slide {
-    from { opacity: .2; transform: translateX(-36px); }
+    from { opacity: 0; transform: translateX(-36px); }
     to { opacity: 1; transform: translateX(0); }
 }
 @keyframes underline-grow {
@@ -922,11 +922,11 @@ html[data-motion="on"] {
     to { transform: scaleX(1); }
 }
 @keyframes project-enter {
-    from { opacity: .2; transform: translateY(44px) scale(.92); }
+    from { opacity: 0; transform: translateY(44px) scale(.92); }
     to { opacity: 1; transform: translateY(0) scale(1); }
 }
 @keyframes portrait-enter {
-    from { opacity: .15; transform: scale(.86) rotate(-4deg); }
+    from { opacity: 0; transform: scale(.86) rotate(-4deg); }
     to { opacity: 1; transform: scale(1) rotate(0); }
 }
 
@@ -950,23 +950,23 @@ html[data-motion="on"] {
 }
 
 @keyframes enter-from-left {
-    from { opacity: .12; transform: translateX(-76px); }
+    from { opacity: 0; transform: translateX(-76px); }
     to { opacity: 1; transform: translateX(0); }
 }
 @keyframes enter-from-right {
-    from { opacity: .12; transform: translateX(76px); }
+    from { opacity: 0; transform: translateX(76px); }
     to { opacity: 1; transform: translateX(0); }
 }
 @keyframes enter-from-depth {
-    from { opacity: .12; transform: perspective(700px) translateZ(-260px); }
+    from { opacity: 0; transform: perspective(700px) translateZ(-260px); }
     to { opacity: 1; transform: perspective(700px) translateZ(0); }
 }
 @keyframes reveal-image {
-    from { opacity: .3; clip-path: inset(0 0 85% 0 round 12px); }
+    from { opacity: 0; clip-path: inset(0 0 85% 0 round 12px); }
     to { opacity: 1; clip-path: inset(0 round 12px); }
 }
 @keyframes enter-timeline {
-    from { opacity: .15; transform: translateX(-22px) scale(.96); }
+    from { opacity: 0; transform: translateX(-22px) scale(.96); }
     to { opacity: 1; transform: translateX(0) scale(1); }
 }
 
@@ -1006,4 +1006,13 @@ html[data-motion="on"] {
         }
         .section-entrance:focus-within { animation: none; }
     }
+}
+
+@media screen {
+    html[data-motion="on"] .scroll-reveal:not(.section-entrance):not(:focus-within) {
+        opacity: 0;
+    }
+}
+@media print {
+    html[data-motion="on"] .section-entrance { animation: none; }
 }

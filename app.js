@@ -3,8 +3,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Personal Info
     document.title = `${portfolioData.personal.name} | Academic Portfolio`;
-    document.getElementById("profile-name").innerText = portfolioData.personal.name;
-    document.getElementById("hero-name").innerText = portfolioData.personal.name;
     document.getElementById("hero-role").innerText = portfolioData.personal.role;
     document.getElementById("profile-img").src = portfolioData.personal.image;
     document.getElementById("email-link").href = `mailto:${portfolioData.personal.email}`;
@@ -116,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const menuToggle = document.getElementById("mobile-toggle");
-const mobileLayout = window.matchMedia("(max-width: 1199px)");
+const mobileLayout = window.matchMedia("(max-width: 800px)");
 
 function setMenu(open) {
     document.body.classList.toggle("mobile-nav-active", open);
@@ -150,3 +148,18 @@ document.addEventListener("keydown", event => {
     }
 });
 mobileLayout.addEventListener("change", () => setMenu(false));
+
+const themeToggle = document.getElementById("theme-toggle");
+function applyTheme(dark) {
+    document.documentElement.dataset.theme = dark ? "dark" : "light";
+    themeToggle.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
+    themeToggle.firstElementChild.className = dark ? "fas fa-sun" : "fas fa-moon";
+}
+let savedTheme;
+try { savedTheme = localStorage.getItem("portfolio-theme"); } catch {}
+applyTheme(savedTheme === "dark" || (!savedTheme && matchMedia("(prefers-color-scheme: dark)").matches));
+themeToggle.addEventListener("click", () => {
+    const dark = document.documentElement.dataset.theme !== "dark";
+    applyTheme(dark);
+    try { localStorage.setItem("portfolio-theme", dark ? "dark" : "light"); } catch {}
+});

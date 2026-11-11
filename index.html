@@ -5,57 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adeel Ahmed | Academic Portfolio</title>
     <meta name="description" content="Adeel Ahmed researches parameter-efficient fine-tuning, low-resource NLP, and medical vision-language models.">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=15">
+    <link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
 
-    <button type="button" class="mobile-nav-toggle" id="mobile-toggle" aria-controls="header" aria-expanded="false" aria-label="Open navigation"><i class="fas fa-bars" aria-hidden="true"></i></button>
-
     <header id="header">
-        <div class="d-flex flex-column">
-            <div class="profile">
-                <h1 class="text-light"><a href="index.html" id="profile-name">Name</a></h1>
-                <div class="social-links text-center">
-                    <a id="linkedin-link" aria-label="LinkedIn profile" href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a id="github-link" aria-label="GitHub profile" href="#" target="_blank"><i class="fab fa-github"></i></a>
-                    <a id="email-link" aria-label="Email Adeel Ahmed" href="#"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-            <nav id="navbar" class="nav-menu navbar">
-                <ul>
-                    <li><a href="#hero" class="nav-link"><i class="fas fa-home"></i> <span>Home</span></a></li>
-                    <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> <span>About</span></a></li>
-                    <li><a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i> <span>Education</span></a></li>
-                    <li><a href="#research" class="nav-link"><i class="fas fa-microscope"></i> <span>Research</span></a></li>
-                    <li><a href="#publications" class="nav-link"><i class="fas fa-book"></i> <span>Publications</span></a></li>
-
-                    <li><a href="#experience" class="nav-link"><i class="fas fa-chalkboard-teacher"></i> <span>Experience</span></a></li>
-                    <li><a href="#projects" class="nav-link"><i class="fas fa-laptop-code"></i> <span>Projects</span></a></li>
-                    <li><a href="#credentials" class="nav-link"><i class="fas fa-certificate"></i> <span>Skills &amp; Certifications</span></a></li>
-                    <li><a href="#community" class="nav-link"><i class="fas fa-people-group" aria-hidden="true"></i> <span>Volunteering &amp; Interests</span></a></li>
-                    <li><a href="#awards" class="nav-link"><i class="fas fa-award"></i> <span>Awards</span></a></li>
-                </ul>
+        <div class="top-bar">
+            <a class="wordmark" href="#hero" aria-label="Adeel Ahmed, home">AA<span>.</span></a>
+            <nav id="navbar" aria-label="Main navigation">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#publications">Research</a>
+                <a href="#projects">Work</a>
+                <a href="#contact">Contact</a>
             </nav>
+            <div class="top-actions">
+                <a class="pill primary" href="cv.html">Academic CV</a>
+                <button type="button" id="theme-toggle" aria-label="Switch to dark theme"><i class="fas fa-moon" aria-hidden="true"></i></button>
+                <button type="button" id="mobile-toggle" aria-controls="navbar" aria-expanded="false" aria-label="Open navigation"><i class="fas fa-bars" aria-hidden="true"></i></button>
+            </div>
         </div>
     </header>
-
+    <aside class="social-rail" aria-label="Profile links">
+        <a id="github-link" href="https://github.com/adeelahmed4868" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a id="linkedin-link" href="https://www.linkedin.com/in/adeel-ahmed-8a3a82184" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+        <a id="email-link" href="mailto:adeelahmed4868@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+    </aside>
     <main id="main">
-    <section id="hero">
-        <div class="hero-container">
-            <div class="hero-copy">
-            <h1 id="hero-name">Adeel Ahmed</h1>
-            <p id="hero-role">AI Researcher &amp; STEM Educator</p>
-            <p class="hero-summary">I study how multilingual models can be adapted for underrepresented languages when labeled data and computing resources are limited. I also teach mathematics and physics and volunteer to teach computer science.</p>
-            <p class="hero-summary">My next question is how to deploy resource-efficient models on edge devices while maintaining accuracy and meeting limits on memory, latency, and energy use.</p>
-            <div class="hero-actions"><a href="#publications">Selected research</a><a href="cv.html">Academic CV</a><a href="https://www.nature.com/articles/s41598-026-77203-3">Read the Scientific Reports paper</a><a href="https://github.com/adeelahmed4868">GitHub</a><a href="#teaching">Teaching experience</a><a href="mailto:adeelahmed4868@gmail.com">Email me</a><a href="https://www.linkedin.com/in/adeel-ahmed-8a3a82184">LinkedIn</a></div>
+        <section id="hero" aria-labelledby="hero-name">
+            <div class="hero-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="hero-container">
+                <p id="hero-role">AI Researcher &amp; STEM Educator</p>
+                <h1 id="hero-name">Adeel<br><span>Ahmed.</span></h1>
+                <div class="hero-bottom">
+                    <div class="hero-description">
+                        <p>I study how multilingual models can be adapted for underrepresented languages when labeled data and computing resources are limited. I teach mathematics and physics and volunteer to teach computer science.</p>
+                        <p>My next question is how to deploy resource-efficient models on edge devices while maintaining accuracy and meeting limits on memory, latency, and energy use.</p>
+                    </div>
+                    <div class="hero-actions">
+                        <a class="pill primary" href="#publications">Explore my research <span aria-hidden="true">↗</span></a>
+                        <a class="pill" href="#about">More about me <span aria-hidden="true">↘</span></a>
+                        <a class="paper-link" href="https://www.nature.com/articles/s41598-026-77203-3">Read the Scientific Reports paper</a>
+                    </div>
+                </div>
             </div>
-            <figure class="hero-headshot">
-                <img id="profile-img" src="photo.jpg" width="1299" height="1577" alt="Adeel Ahmed">
-            </figure>
-        </div>
-    </section>
+        </section>
+        <section id="about" class="about section-bg">
+            <div class="container">
+                <div class="section-title"><h2>About</h2></div>
+                <div class="about-layout">
+                    <figure class="about-portrait"><img id="profile-img" src="photo.jpg" width="1299" height="1577" alt="Adeel Ahmed"></figure>
+                    <div class="content" id="about-content"></div>
+                </div>
+                <figure class="about-lab">
+                    <img src="ai-research-lab.webp" width="880" height="928" loading="lazy" alt="AI-generated portrait of Adeel Ahmed working at a machine learning workstation">
+                </figure>
+            </div>
+        </section>
 
         <section id="publications" class="publications section-bg">
             <div class="container">
@@ -88,15 +97,7 @@
             </div>
         </section>
 
-        <section id="about" class="about section-bg">
-            <div class="container">
-                <div class="section-title"><h2>About</h2></div>
-                <div class="content" id="about-content"></div>
-                <figure class="about-lab">
-                    <img src="ai-research-lab.webp" width="880" height="928" loading="lazy" alt="AI-generated portrait of Adeel Ahmed working at a machine learning workstation">
-                </figure>
-            </div>
-        </section>
+
 
         <section id="education">
             <div class="container">
@@ -362,16 +363,32 @@
     </main>
 
     <footer id="footer">
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong id="footer-name">Name</strong>
+        <div class="container footer-layout">
+            <div id="contact">
+                <h2>Get in touch.</h2>
+                <p><a href="mailto:adeelahmed4868@gmail.com">adeelahmed4868@gmail.com</a></p>
+                <p>&copy; <strong id="footer-name">Adeel Ahmed</strong></p>
             </div>
+            <nav aria-label="Explore portfolio">
+                <a href="#education">Education</a>
+                <a href="#thesis-work">Thesis</a>
+                <a href="#research">Research interests</a>
+                <a href="#teaching">Teaching</a>
+                <a href="#credentials">Certifications</a>
+                <a href="#community">Volunteering</a>
+                <a href="#awards">Awards</a>
+            </nav>
+            <nav aria-label="Connect">
+                <a href="https://www.linkedin.com/in/adeel-ahmed-8a3a82184">LinkedIn</a>
+                <a href="https://github.com/adeelahmed4868">GitHub</a>
+                <a href="#hero">Back to top ↑</a>
+            </nav>
         </div>
     </footer>
 
     <!-- Load Data and Application Logic -->
     <script src="data.js?v=26"></script>
-    <script src="app.js?v=23"></script>
+    <script src="app.js?v=24"></script>
     
 </body>
 </html>

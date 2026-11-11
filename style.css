@@ -948,3 +948,62 @@ html[data-motion="on"] {
         filter: saturate(1.2);
     }
 }
+
+@keyframes enter-from-left {
+    from { opacity: .12; transform: translateX(-52px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes enter-from-right {
+    from { opacity: .12; transform: translateX(52px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes enter-from-depth {
+    from { opacity: .12; transform: perspective(700px) translateZ(-180px); }
+    to { opacity: 1; transform: perspective(700px) translateZ(0); }
+}
+@keyframes reveal-image {
+    from { opacity: .3; clip-path: inset(0 0 85% 0 round 12px); }
+    to { opacity: 1; clip-path: inset(0 round 12px); }
+}
+@keyframes enter-timeline {
+    from { opacity: .15; transform: translateX(-22px) scale(.96); }
+    to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+html[data-motion="on"] {
+    main { overflow-x: clip; }
+
+    #about-content.section-entrance,
+    .grid > .card.section-entrance:nth-child(even),
+    .work-card.section-entrance:nth-child(3n + 2),
+    .experience-card.section-entrance:nth-child(even) {
+        animation-name: enter-from-right;
+    }
+
+    .grid > .card.section-entrance:nth-child(odd),
+    .work-card.section-entrance:nth-child(3n + 1),
+    .experience-card.section-entrance:nth-child(odd) {
+        animation-name: enter-from-left;
+    }
+
+    .work-card.section-entrance:nth-child(3n) {
+        animation-name: enter-from-depth;
+    }
+
+    main figure.section-entrance { animation-name: reveal-image; }
+    .resume-item.section-entrance {
+        transform-origin: left center;
+        animation-name: enter-timeline;
+    }
+
+    .section-entrance:focus-within { animation: none; }
+
+    @media (max-width: 600px) {
+        .grid > .card.section-entrance,
+        .work-card.section-entrance,
+        .experience-card.section-entrance {
+            animation-name: project-enter;
+        }
+        .section-entrance:focus-within { animation: none; }
+    }
+}

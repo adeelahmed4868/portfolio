@@ -148,7 +148,7 @@ section {
     min-height: min(560px, 75svh);
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #f7f4eb, #e8f0f4);
+    background: linear-gradient(135deg, #edf3fa, #e8f0f4);
     position: relative;
 }
 #hero .hero-container {
@@ -520,24 +520,24 @@ main .hero-actions a {
 
 /* Editorial portfolio layout */
 :root {
-    --page: #fcf7f9;
-    --surface: #fffafb;
-    --ink: #241820;
-    --muted: #65535d;
-    --accent: #923552;
-    --line: #e6cdd7;
-    --orbit: #b64f742f;
+    --page: #f1f5f9;
+    --surface: #ffffff;
+    --ink: #10233a;
+    --muted: #475569;
+    --accent: #174d86;
+    --line: #cbd7e5;
+    --orbit: #2767a42f;
     --header-height: 76px;
 }
 :root[data-theme="dark"] {
     color-scheme: dark;
-    --page: #21171e;
-    --surface: #2d2029;
-    --ink: #fff0f5;
-    --muted: #dcc3cf;
-    --accent: #f29ab7;
-    --line: #624354;
-    --orbit: #e080aa40;
+    --page: #0b1422;
+    --surface: #142438;
+    --ink: #eaf2fc;
+    --muted: #b9cadd;
+    --accent: #8dc5ff;
+    --line: #36516e;
+    --orbit: #75b6ff40;
 }
 html { scroll-padding-top: calc(var(--header-height) + 16px); }
 body { background: var(--page); color: var(--ink); }
@@ -597,7 +597,7 @@ body { background: var(--page); color: var(--ink); }
     font-weight: 700;
     white-space: nowrap;
 }
-.pill.primary, #hero .hero-actions .pill.primary { background: #923552; border-color: #923552; color: white; }
+.pill.primary, #hero .hero-actions .pill.primary { background: #174d86; border-color: #174d86; color: white; }
 .social-rail {
     display: grid;
     gap: 17px;
@@ -753,13 +753,13 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
     text-underline-offset: .35em;
 }
 #hero .hero-actions .pill:hover, .top-actions .pill:hover { border-color: var(--accent); }
-#hero .hero-actions .pill.primary:hover, .top-actions .pill.primary:hover { background: #78263f; }
+#hero .hero-actions .pill.primary:hover, .top-actions .pill.primary:hover { background: #103a68; }
 #hero .hero-actions .paper-link:hover { text-decoration-thickness: 2px; }
 .footer-layout a { overflow-wrap: anywhere; }
 @media (max-width: 1050px) {
     #navbar { max-height: calc(100svh - var(--header-height)); overflow-y: auto; }
 }
-@media (prefers-reduced-motion: no-preference) {
+html[data-motion="on"] {
     html { scroll-behavior: smooth; }
     #hero #hero-role { animation: portfolio-appear .55s ease-out both; }
     #hero h1 { animation: portfolio-appear .75s .08s ease-out both; }
@@ -804,7 +804,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
     width: 100%;
     height: auto;
     border-radius: 18px;
-    box-shadow: 0 12px 28px #37202c24;
+    box-shadow: 0 12px 28px #10233a24;
 }
 .about-layout .about-lab { margin: 0; }
 @media (max-width: 600px) {
@@ -812,7 +812,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
     #hero .hero-heading h1 { font-size: clamp(41px, 12vw, 74px); }
     .hero-portrait img { border-radius: 10px; }
 }
-@media (prefers-reduced-motion: no-preference) {
+html[data-motion="on"] {
     .hero-portrait { animation: portfolio-appear .65s .18s ease-out both; }
 }
 
@@ -852,7 +852,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .experience-card {
     overflow: hidden;
     padding: 0 0 18px;
-    box-shadow: 0 12px 28px #2418200c;
+    box-shadow: 0 12px 28px #10233a0c;
 }
 .card-image {
     display: block;
@@ -872,11 +872,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
     color: var(--muted);
     font-size: .85rem;
 }
-@media (prefers-reduced-motion: no-preference) {
+html[data-motion="on"] {
     .work-card, .experience-card { transition: transform .2s ease, box-shadow .2s ease; }
     .work-card:hover, .experience-card:hover {
         transform: translateY(-3px);
-        box-shadow: 0 16px 32px #2418201c;
+        box-shadow: 0 16px 32px #10233a1c;
     }
 }
 
@@ -886,16 +886,28 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 
 .scroll-progress { display: none; }
-@media (prefers-reduced-motion: no-preference) {
+html[data-motion="on"] {
     .scroll-progress {
         display: block;
         position: fixed;
         inset: 0 0 auto;
         height: 3px;
-        background: #b44a71;
+        background: #327cc7;
         transform: scaleX(0);
         transform-origin: left;
         pointer-events: none;
         z-index: 1100;
     }
 }
+
+#motion-toggle {
+    width: auto;
+    height: 36px;
+    padding: 0 9px;
+    border-radius: 20px;
+    font-size: .75rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+#motion-toggle[hidden] { display: none; }
+#motion-toggle[aria-pressed="true"] { background: #174d86; color: white; }

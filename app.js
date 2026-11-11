@@ -191,8 +191,7 @@ markCurrentLocation();
 window.addEventListener("hashchange", markCurrentLocation);
 
 document.addEventListener("DOMContentLoaded", () => {
-    if (!("IntersectionObserver" in window) ||
-        !matchMedia("(prefers-reduced-motion: no-preference)").matches) return;
+    if (!("IntersectionObserver" in window)) return;
 
     const targets = [
         "main .section-title", "main .card", "main .resume-item",
@@ -218,6 +217,26 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!element.parentElement.closest(targets.join(", "))) observer.observe(element);
     });
 });
+
+const motionToggle = document.getElementById("motion-toggle");
+const motionPreference = matchMedia("(prefers-reduced-motion: reduce)");
+let motionOverride;
+try { motionOverride = localStorage.getItem("portfolio-motion"); } catch {}
+
+function applyMotion() {
+    const enabled = motionOverride ? motionOverride === "on" : !motionPreference.matches;
+    document.documentElement.dataset.motion = enabled ? "on" : "off";
+    motionToggle.setAttribute("aria-pressed", String(enabled));
+    motionToggle.textContent = enabled ? "Motion on" : "Motion off";
+}
+applyMotion();
+motionToggle.hidden = false;
+motionToggle.addEventListener("click", () => {
+    motionOverride = document.documentElement.dataset.motion === "on" ? "off" : "on";
+    try { localStorage.setItem("portfolio-motion", motionOverride); } catch {}
+    applyMotion();
+});
+motionPreference.addEventListener("change", applyMotion);
 
 const scrollProgress = document.querySelector(".scroll-progress");
 function updateScrollProgress() {

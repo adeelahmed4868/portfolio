@@ -60,8 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 6. Projects Section
     const projContainer = document.getElementById("projects-grid");
-    const additionalProjects = document.getElementById("additional-projects-grid");
-    portfolioData.projects.forEach((proj, index) => {
+    portfolioData.projects.forEach((proj) => {
         const div = document.createElement("div");
         div.className = "card border-top-blue";
         div.innerHTML = `
@@ -115,8 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             div.append(heading, skills);
         }
-        const container = index < 3 ? projContainer : additionalProjects;
-        container.appendChild(div);
+        projContainer.appendChild(div);
     });
 
     // 7. Awards Section

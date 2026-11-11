@@ -778,3 +778,37 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
     from { opacity: 0; transform: translateX(-50%) rotate(-7deg) scale(.96); }
     to { opacity: 1; transform: translateX(-50%) rotate(0) scale(1); }
 }
+
+.hero-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, .45fr);
+    align-items: center;
+    gap: clamp(16px, 4vw, 54px);
+    margin-bottom: clamp(32px, 5vw, 64px);
+}
+#hero .hero-heading h1 {
+    margin-bottom: 0;
+    font-size: clamp(60px, 12vw, 170px);
+}
+.hero-portrait {
+    width: 100%;
+    max-width: 250px;
+    justify-self: end;
+    margin: 0;
+}
+.hero-portrait img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 12px 28px #37202c24;
+}
+.about-layout .about-lab { margin: 0; }
+@media (max-width: 600px) {
+    .hero-heading { gap: 12px; }
+    #hero .hero-heading h1 { font-size: clamp(41px, 12vw, 74px); }
+    .hero-portrait img { border-radius: 10px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+    .hero-portrait { animation: portfolio-appear .65s .18s ease-out both; }
+}

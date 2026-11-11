@@ -767,7 +767,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
     #hero .hero-actions { animation: portfolio-appear .6s .33s ease-out both; }
     .hero-orbit { animation: portfolio-orbit 2s ease-out both; }
     .section-entrance {
-        animation: portfolio-scroll-in .65s cubic-bezier(.2, .7, .3, 1) var(--entrance-delay, 0ms) backwards;
+        animation: portfolio-scroll-in .9s cubic-bezier(.2, .7, .3, 1) var(--entrance-delay, 0ms) backwards;
     }
     .section-entrance:focus-within { animation: none; }
     .pill, .top-actions button { transition: background-color .18s ease, border-color .18s ease, transform .18s ease; }
@@ -881,6 +881,21 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 
 @keyframes portfolio-scroll-in {
-    from { opacity: .2; transform: translateY(26px); }
+    from { opacity: .12; transform: translateY(48px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+.scroll-progress { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+    .scroll-progress {
+        display: block;
+        position: fixed;
+        inset: 0 0 auto;
+        height: 3px;
+        background: #b44a71;
+        transform: scaleX(0);
+        transform-origin: left;
+        pointer-events: none;
+        z-index: 1100;
+    }
 }

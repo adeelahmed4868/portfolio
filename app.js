@@ -203,16 +203,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver((entries) => {
         let delay = 0;
         for (const { target, isIntersecting } of entries) {
-            if (!isIntersecting) continue;
-            observer.unobserve(target);
+            if (!isIntersecting) {
+                target.classList.remove("section-entrance");
+                continue;
+            }
             if (target.contains(document.activeElement)) continue;
             target.style.setProperty("--entrance-delay", `${delay}ms`);
             target.classList.add("section-entrance");
-            delay = Math.min(delay + 55, 165);
+            delay = Math.min(delay + 85, 255);
         }
-    }, { rootMargin: "0px 0px -4% 0px" });
+    }, { rootMargin: "0px 0px -14% 0px" });
 
     document.querySelectorAll(targets.join(", ")).forEach(element => {
         if (!element.parentElement.closest(targets.join(", "))) observer.observe(element);
     });
 });
+
+const scrollProgress = document.querySelector(".scroll-progress");
+function updateScrollProgress() {
+    const root = document.documentElement;
+    const distance = root.scrollHeight - root.clientHeight;
+    const progress = distance > 0 ? root.scrollTop / distance : 0;
+    scrollProgress.style.transform = `scaleX(${Math.min(1, Math.max(0, progress))})`;
+}
+window.addEventListener("scroll", updateScrollProgress, { passive: true });
+window.addEventListener("resize", updateScrollProgress);
+window.addEventListener("load", updateScrollProgress);
+updateScrollProgress();

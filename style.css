@@ -766,7 +766,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
     #hero .hero-description { animation: portfolio-appear .6s .23s ease-out both; }
     #hero .hero-actions { animation: portfolio-appear .6s .33s ease-out both; }
     .hero-orbit { animation: portfolio-orbit 2s ease-out both; }
-    .section-entrance { animation: portfolio-appear .5s ease-out both; }
+    .section-entrance {
+        animation: portfolio-scroll-in .65s cubic-bezier(.2, .7, .3, 1) var(--entrance-delay, 0ms) backwards;
+    }
+    .section-entrance:focus-within { animation: none; }
     .pill, .top-actions button { transition: background-color .18s ease, border-color .18s ease, transform .18s ease; }
     .pill:hover, .top-actions button:hover { transform: translateY(-2px); }
 }
@@ -875,4 +878,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
         transform: translateY(-3px);
         box-shadow: 0 16px 32px #2418201c;
     }
+}
+
+@keyframes portfolio-scroll-in {
+    from { opacity: .2; transform: translateY(26px); }
+    to { opacity: 1; transform: translateY(0); }
 }

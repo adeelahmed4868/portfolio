@@ -190,16 +190,29 @@ function markCurrentLocation() {
 markCurrentLocation();
 window.addEventListener("hashchange", markCurrentLocation);
 
-if ("IntersectionObserver" in window && matchMedia("(prefers-reduced-motion: no-preference)").matches) {
-    const entranceObserver = new IntersectionObserver((entries, observer) => {
-        for (const entry of entries) {
-            if (!entry.isIntersecting) continue;
-            if (!entry.target.contains(document.activeElement)) {
-                entry.target.classList.add("section-entrance");
-            }
-            observer.unobserve(entry.target);
+document.addEventListener("DOMContentLoaded", () => {
+    if (!("IntersectionObserver" in window) ||
+        !matchMedia("(prefers-reduced-motion: no-preference)").matches) return;
+
+    const targets = [
+        "main .section-title", "main .card", "main .resume-item",
+        "main section:not(#hero) figure", "main .container > p",
+        "main .container > ul > li", ".section-visual > .content",
+        "#about-content", ".footer-layout > *"
+    ];
+    const observer = new IntersectionObserver((entries) => {
+        let delay = 0;
+        for (const { target, isIntersecting } of entries) {
+            if (!isIntersecting) continue;
+            observer.unobserve(target);
+            if (target.contains(document.activeElement)) continue;
+            target.style.setProperty("--entrance-delay", `${delay}ms`);
+            target.classList.add("section-entrance");
+            delay = Math.min(delay + 55, 165);
         }
-    }, { threshold: 0.12 });
-    document.querySelectorAll("main .section-title, .section-visual figure, .about-portrait")
-        .forEach(element => entranceObserver.observe(element));
-}
+    }, { rootMargin: "0px 0px -4% 0px" });
+
+    document.querySelectorAll(targets.join(", ")).forEach(element => {
+        if (!element.parentElement.closest(targets.join(", "))) observer.observe(element);
+    });
+});

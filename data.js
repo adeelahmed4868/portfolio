@@ -40,7 +40,7 @@ const portfolioData = {
         },
         {
             title: "AI Research Collaborator",
-            image: { src: "ai-research-lab.webp", alt: "Illustration of Adeel reviewing model outputs at a computing workstation" },
+            image: { src: "medical-ai-workstation.webp", alt: "Illustration of a medical AI workstation displaying chest radiographs" },
             date: "2024 - 2026",
             organization: "Riphah International University",
             duties: [
